@@ -1,34 +1,10 @@
-Here is the content of the PDF converted to Markdown:
-
----
-
 # Libft
 **Your very first own library**
 
 ## Summary:
-This project is about coding a C library. It will contain a lot of general-purpose functions your programs will rely upon.
+This project is about coding a C library.
 
 **Version:** 16.1
-
----
-
-## Contents
-- I Introduction
-- II Common Instructions
-- III Mandatory part
-  - III.1 Technical considerations
-  - III.2 Part 1 - Libc functions
-  - III.3 Part 2 - Additional functions
-- IV Bonus part
-- V Submission and peer-evaluation
-
----
-
-# Chapter I: Introduction
-
-C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing, and learning to use them. You will create your own library. It will be helpful since you will use it in your next C school assignments.
-
-Take the time to expand your libft throughout the year. However, when working on a new project, don’t forget to ensure the functions used in your library are allowed in the project guidelines.
 
 ---
 
@@ -65,26 +41,31 @@ You must redo a set of functions from the libc with the same prototypes and beha
 
 - [x] isalpha
 - [x] isdigit
-- [ ] tolower
-- [ ] isalnum
-- [ ] isascii
-- [ ] strchr
-- [ ] isprint
-- [ ] strrchr
-- [ ] strlen
-- [ ] strncmp
+- [x] isalnum
+- [x] isascii
+- [x] isprint
+- [x] strlen
 - [ ] memset
 - [ ] bzero
-- [ ] memchr
 - [ ] memcpy
-- [ ] memcmp
 - [ ] memmove
-- [ ] strnstr
 - [ ] strlcpy
 - [ ] strlcat
+- [ ] toupper
+- [ ] tolower
+- [ ] strchr
+- [ ] strrchr
+- [ ] strncmp
+- [ ] memchr
+- [ ] memcmp
+- [ ] strnstr
 - [ ] atoi
 
-Use `malloc()` for `ft_calloc` and `ft_strdup`.
+Use `malloc()` for:
+- [ ] ft_calloc 
+- [ ] ft_strdup
+
+---
 
 ## III.3 Part 2 - Additional Functions
 Implement additional useful functions. Examples:
