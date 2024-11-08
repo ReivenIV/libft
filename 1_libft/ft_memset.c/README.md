@@ -16,22 +16,17 @@ void *ft_memset(void *buffer, int simbol, size_t size);
 
 Here’s a step-by-step breakdown of how the function works:
 
-### 1. Declare Variables
-```c
-unsigned char *p;
-size_t i;
-```
-- **`p`**: A pointer to `unsigned char` that will be used to manipulate each byte of `buffer`. Casting to `unsigned char` allows the function to work with individual bytes.
-- **`i`**: A `size_t` variable to track the current index while iterating through the memory area.
 
-### 2. Cast the `buffer` Pointer
+
+
+### 1. Cast the `buffer` Pointer
 ```c
 p = (unsigned char*)buffer;
 ```
 - **What is Casting?**: In C, casting is the process of converting a variable from one data type to another. In this project, we cast `buffer` (a generic `void *` pointer) to `unsigned char *`. This allows us to work with each byte individually, which is essential for setting each byte in the memory block.
 - **Why Use Casting Here?**: `void *` is a generic pointer type that can point to any data type, but it can’t be directly dereferenced. By casting `buffer` to `unsigned char *`, we ensure that we can access and modify the memory block byte-by-byte, regardless of the original data type stored there.
 
-### 3. Fill the Memory Area
+### 2. Fill the Memory Area
 ```c
 while(i < size)
 {
@@ -39,20 +34,16 @@ while(i < size)
     i++;
 }
 ```
+- **p**: A pointer to `unsigned char` that will be used to manipulate each byte of `buffer`. Casting to `unsigned char` allows the function to work with individual bytes.
 - **Loop Condition**: The loop continues as long as `i` is less than `size`.
 - **Setting the Byte**: Each byte in the memory area pointed to by `p` is set to the value of `simbol`, cast to `unsigned char`.
 - **Increment Counter**: `i` is incremented after each byte is set, moving to the next position in the memory area.
 
-### 4. Return the Original Buffer Pointer
+### 3. Return the Original Buffer Pointer
 ```c
 return (buffer);
 ```
 - The function returns the original `buffer` pointer, allowing the caller to capture the pointer if needed or to use the function in chained expressions.
-
-## Usage Example
-You can use the main commented and build/run the code.
-
-```
 
 ## Summary
 
