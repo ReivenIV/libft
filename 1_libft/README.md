@@ -46,7 +46,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] isprint
 - [x] strlen
 - [x] memset
-- [ ] bzero
+- [x] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy
@@ -70,13 +70,13 @@ Use `malloc()` for:
 ## III.3 Part 2 - Additional Functions
 Implement additional useful functions. Examples:
 
-- **ft_substr**  
+- [ ] **ft_substr**  
   **Prototype:** `char *ft_substr(char const *s, unsigned int start, size_t len);`
 
-- **ft_strjoin**  
+- [ ] **ft_strjoin**  
   **Prototype:** `char *ft_strjoin(char const *s1, char const *s2);`
 
-- **ft_split**  
+- [ ] **ft_split**  
   **Prototype:** `char **ft_split(char const *s, char c);`
 
 ---
@@ -97,14 +97,14 @@ typedef struct s_list
 
 Implement the following list manipulation functions:
 
-- **ft_lstnew**
-- **ft_lstadd_front**
-- **ft_lstsize**
-- **ft_lstlast**
-- **ft_lstadd_back**
-- **ft_lstdelone**
-- **ft_lstclear**
-- **ft_lstiter**
-- **ft_lstmap**
+- [ ] **ft_lstnew**
+- [ ] **ft_lstadd_front**
+- [ ] **ft_lstsize**
+- [ ] **ft_lstlast**
+- [ ] **ft_lstadd_back**
+- [ ] **ft_lstdelone**
+- [ ] **ft_lstclear**
+- [ ] **ft_lstiter**
+- [ ] **ft_lstmap**
 
 ---

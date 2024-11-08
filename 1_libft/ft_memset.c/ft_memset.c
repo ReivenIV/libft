@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:49:37 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 13:18:24 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:55:38 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@
 */
 #include <stddef.h>
 
-void    *ft_memset(void *buffer, int simbol, size_t size)
+void	*ft_memset(void *buffer, int simbol, size_t size)
 {
-    unsigned char *p;
-    size_t i;
-    
-    p = (unsigned char*)buffer;
-    i = 0;
+	unsigned char *p;
+	size_t i;
 
-    while(i < size)
-    {
-        p[i] = (unsigned char)simbol;
-        i++;
-    }
-    return (buffer);
+	p = (unsigned char*)buffer;
+	i = 0;
+
+	while(i < size)
+	{
+		p[i] = (unsigned char)simbol;
+		i++;
+	}
+	return (buffer);
 }
 /*
 #include <stdio.h>
