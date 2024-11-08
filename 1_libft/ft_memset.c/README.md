@@ -44,7 +44,7 @@ while(i < size)
 return (buffer);
 ```
 - The function returns the original `buffer` pointer, allowing the caller to capture the pointer if needed or to use the function in chained expressions.
-
+- (Why returning buffer ?)[https://github.com/ReivenIV/42_student.pp/blob/main/1_libft/ft_memset.c/why_returning_buffer.md] 
 ## Summary
 
 - **Purpose**: `ft_memset` is used to set a block of memory to a specific value, byte by byte.

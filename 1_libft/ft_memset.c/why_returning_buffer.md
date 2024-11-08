@@ -1,4 +1,4 @@
-### Why We Return `buffer` (Not `p`)
+# Why We Return `buffer` and Not `p` ?
 
 In the code:
 ```c
