@@ -52,7 +52,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [ ] strlcpy
 - [ ] strlcat
 - [x] toupper
-- [ ] tolower
+- [x] tolower
 - [ ] strchr
 - [ ] strrchr
 - [ ] strncmp
