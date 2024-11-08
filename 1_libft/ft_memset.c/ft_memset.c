@@ -6,10 +6,15 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:49:37 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 13:04:41 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:18:24 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+/* 
+* `ft_memset` is used to set a block of memory to a 
+* specific value, byte by byte.
+*/
 #include <stddef.h>
 
 void    *ft_memset(void *buffer, int simbol, size_t size)
@@ -27,7 +32,7 @@ void    *ft_memset(void *buffer, int simbol, size_t size)
     }
     return (buffer);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -81,3 +86,4 @@ int main() {
 
     return 0;
 }
+*/

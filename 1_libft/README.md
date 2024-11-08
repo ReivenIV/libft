@@ -45,13 +45,13 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] isascii
 - [x] isprint
 - [x] strlen
-- [ ] memset
+- [x] memset
 - [ ] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy
 - [ ] strlcat
-- [ ] toupper
+- [x] toupper
 - [ ] tolower
 - [ ] strchr
 - [ ] strrchr
