@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:58:14 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 18:54:40 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:30:25 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
  * It reads characters from the string until it reaches a non-numeric 
  * character, interpreting them as digits and returning the corresponding 
  * integer value.
+ * 
+ * // REMINDER : atoi does not handle un/overflow numbers.
  */
 
 int	ft_atoi(char *str)
@@ -65,11 +67,10 @@ int	ft_atoi(char *str)
 //         "   ",          
 //         "",             
 //         "+-123", 
-// !       "2247483648",       
-// !       "999999999999999999999", // Large overflow
-// !       "-999999999999999999999" // Large underflow
+//        "2247483648",       
+//        "999999999999999999999", // Large overflow
+//        "-999999999999999999999" // Large underflow
 //     };
-
 //     int i = 0;
 //     while (i < 21) {
 //         int res_atoi = atoi(tests[i]);
