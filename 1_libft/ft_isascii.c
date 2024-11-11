@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:52:58 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 15:35:04 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:58:53 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int	ft_isascii(int c)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char	test_chars[] = {'a', 'z', 'A', 'Z', '0', '9', '-', '[', '%', '£', 'ñ', 'ü'};
+// 	char	test_chars[] = {'a', 'z', 'A', 'Z', '0', '9', '-', 
+//'[', '%', '£', 'ñ', 'ü'};
 
 //     for (int i = 0; i < 12; i++) {
 //         printf("isascii(%c): %d\n", test_chars[i], isascii(test_chars[i]));
