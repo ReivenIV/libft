@@ -59,7 +59,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
-- [ ] atoi
+- [x] atoi
 
 Use `malloc()` for:
 - [ ] ft_calloc 
