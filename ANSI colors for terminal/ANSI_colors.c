@@ -33,6 +33,7 @@ int main() {
     const char *BG_CYAN = "\033[46m";
     const char *BG_WHITE = "\033[47m";
 
+	//! Important one 
     const char *RESET = "\033[0m";
 
     // Print "Hello World!" with each color and its code

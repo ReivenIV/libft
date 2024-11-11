@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:33:22 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 12:50:35 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:25:08 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	*ft_memcpy(void *str_dest, const void *str_src, size_t n)
 	unsigned char		*dest;
 	unsigned const char	*src;
 
+	if(str_dest == NULL && str_dest == NULL)
+		return (NULL);
 	i = 0;
 	dest = (unsigned char *)str_dest;
 	src = (unsigned const char *)str_src;
