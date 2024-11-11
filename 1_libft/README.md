@@ -1,14 +1,11 @@
 # Libft
-**Your very first own library**
 
 ## Summary:
 This project is about coding a C library.
 
-**Version:** 16.1
-
 ---
 
-# Chapter II: Common Instructions
+# Common Instructions
 
 - Your project must be written in C.
 - Your project must be written in accordance with the Norm.
@@ -22,21 +19,20 @@ This project is about coding a C library.
 
 ---
 
-# Chapter III: Mandatory Part
+# Mandatory Part
 
 **Program name:** `libft.a`  
 **Turn in files:** `Makefile`, `libft.h`, `ft_*.c`  
 **Makefile rules:** `NAME`, `all`, `clean`, `fclean`, `re`  
-**Description:** Write your own library: a collection of functions that will be a useful tool for your cursus.
 
-## III.1 Technical Considerations
+## Technical Considerations
 - Declaring global variables is forbidden.
 - If you need helper functions to split a more complex function, define them as static functions.
 - Place all your files at the root of your repository.
 - Every `.c` file must compile with the flags `-Wall -Wextra -Werror`.
 - Use the command `ar` to create your library.
 
-## III.2 Part 1 - Libc Functions
+## Libft Functions
 You must redo a set of functions from the libc with the same prototypes and behaviors. Examples:
 
 - [x] isalpha
@@ -49,7 +45,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] bzero
 - [x] memcpy
 - [x] memmove
-- [ ] strlcpy
+- [x] strlcpy
 - [ ] strlcat
 - [x] toupper
 - [x] tolower
@@ -67,7 +63,7 @@ Use `malloc()` for:
 
 ---
 
-## III.3 Part 2 - Additional Functions
+## Additional Functions
 Implement additional useful functions. Examples:
 
 - [ ] **ft_substr**  
@@ -81,7 +77,7 @@ Implement additional useful functions. Examples:
 
 ---
 
-# Chapter IV: Bonus Part
+# Bonus Part
 
 If you completed the mandatory part, attempt the bonus part for additional points.
 
@@ -107,4 +103,3 @@ Implement the following list manipulation functions:
 - [ ] **ft_lstiter**
 - [ ] **ft_lstmap**
 
----
