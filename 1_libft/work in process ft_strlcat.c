@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   work in process ft_strlcat.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:14:02 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 18:08:52 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:14:03 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ size_t	ft_strlen(const char *str)
 		count++;
 	return (count);
 }
+// ! need to be checked is working but not all the edge-cases. 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
