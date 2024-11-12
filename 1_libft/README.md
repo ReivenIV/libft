@@ -46,7 +46,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] memcpy
 - [x] memmove
 - [x] strlcpy
-- [ ] strlcat
+- [x] strlcat
 - [x] toupper
 - [x] tolower
 - [ ] strchr
