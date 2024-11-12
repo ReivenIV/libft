@@ -49,7 +49,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] strlcat
 - [x] toupper
 - [x] tolower
-- [ ] strchr
+- [x] strchr
 - [ ] strrchr
 - [ ] strncmp
 - [ ] memchr
