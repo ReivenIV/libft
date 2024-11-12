@@ -6,9 +6,17 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:14:25 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/12 14:04:43 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:12:36 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+ * strchr will output the pointer of the string related to a target.
+ * ft_strchr("hello", 'e') // output : "ello"
+ * ft_strchr("hello", 'o') // output : "o"
+ * ft_strchr("hello", '\0') // output : '\0'
+ * ft_strchr("hello", 'z') // output : NULL
+*/
 
 #include <string.h>
 
@@ -65,5 +73,5 @@ char	*ft_strchr(const char *src, int target)
 // 	char *result5 = ft_strchr(str5, ch5);
 // 	printf("output: %s%s%s\n", GREEN, result5 ? result5 : "NULL", RESET);
 
-// 	return 0;
+// 	return (0);
 // }
