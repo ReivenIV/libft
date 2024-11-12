@@ -50,8 +50,8 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] toupper
 - [x] tolower
 - [x] strchr
-- [ ] strrchr
-- [ ] strncmp
+- [x] strrchr
+- [x] strncmp
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
