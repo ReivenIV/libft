@@ -54,7 +54,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] strncmp
 - [x] memchr
 - [x] memcmp
-- [ ] strnstr
+- [x] strnstr
 - [x] atoi
 
 Use `malloc()` for:
@@ -63,17 +63,148 @@ Use `malloc()` for:
 
 ---
 
+## III.3 Part 2 - Additional Functions
+
+
+- [ ] **ft_substr**
+- [ ] **ft_strjoin**
+- [ ] **ft_strtrim**
+- [ ] **ft_split**
+- [ ] **ft_itoa**
+- [ ] **ft_strmapi**
+- [ ] **ft_striteri**
+- [ ] **ft_putchar_fd**
+- [ ] **ft_putstr_fd**
+- [ ] **ft_putendl_fd**
+- [ ] **ft_putnbr_fd**
+
+
+
+In this second part, you must develop a set of functions that are either not in the libc or are part of it but in a different form. Some of the following functions can be useful for writing the functions of Part 1.
+
+### Function: `ft_substr`
+
+- **Prototype**: `char *ft_substr(char const *s, unsigned int start, size_t len);`
+- **Turn in files**: -
+- **Parameters**:
+  - `s`: The string from which to create the substring.
+  - `start`: The start index of the substring in the string `s`.
+  - `len`: The maximum length of the substring.
+- **Return value**: The substring, or `NULL` if the allocation fails.
+- **External functions**: `malloc`
+- **Description**: Allocates (with `malloc(3)`) and returns a substring from the string `s`. The substring begins at index `start` and is of maximum size `len`.
+
+### Function: `ft_strjoin`
+
+- **Prototype**: `char *ft_strjoin(char const *s1, char const *s2);`
+- **Turn in files**: -
+- **Parameters**:
+  - `s1`: The prefix string.
+  - `s2`: The suffix string.
+- **Return value**: The new string, or `NULL` if the allocation fails.
+- **External functions**: `malloc`
+- **Description**: Allocates (with `malloc(3)`) and returns a new string, which is the result of the concatenation of `s1` and `s2`.
+
+Here’s the markdown version of the additional functions described in the PDFs:
+
+---
+
+# Libft - Your Very First Own Library
+
 ## Additional Functions
-Implement additional useful functions. Examples:
 
-- [ ] **ft_substr**  
-  **Prototype:** `char *ft_substr(char const *s, unsigned int start, size_t len);`
+### Function: `ft_strtrim`
 
-- [ ] **ft_strjoin**  
-  **Prototype:** `char *ft_strjoin(char const *s1, char const *s2);`
+- **Prototype**: `char *ft_strtrim(char const *s1, char const *set);`
+- **Parameters**:
+  - `s1`: The string to be trimmed.
+  - `set`: The reference set of characters to trim.
+- **Return value**: The trimmed string, or `NULL` if the allocation fails.
+- **External functions**: `malloc`
+- **Description**: Allocates (with `malloc(3)`) and returns a copy of `s1` with the characters specified in `set` removed from the beginning and the end of the string.
 
-- [ ] **ft_split**  
-  **Prototype:** `char **ft_split(char const *s, char c);`
+### Function: `ft_split`
+
+- **Prototype**: `char **ft_split(char const *s, char c);`
+- **Parameters**:
+  - `s`: The string to be split.
+  - `c`: The delimiter character.
+- **Return value**: The array of new strings resulting from the split, or `NULL` if the allocation fails.
+- **External functions**: `malloc`, `free`
+- **Description**: Allocates (with `malloc(3)`) and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter. The array ends with a `NULL` pointer.
+
+### Function: `ft_itoa`
+
+- **Prototype**: `char *ft_itoa(int n);`
+- **Parameters**:
+  - `n`: The integer to convert.
+- **Return value**: The string representing the integer, or `NULL` if the allocation fails.
+- **External functions**: `malloc`
+- **Description**: Allocates (with `malloc(3)`) and returns a string representing the integer received as an argument. Negative numbers are handled.
+
+---
+
+### Function: `ft_strmapi`
+
+- **Prototype**: `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));`
+- **Parameters**:
+  - `s`: The string on which to iterate.
+  - `f`: The function to apply to each character.
+- **Return value**: The string created from the successive applications of `f`, or `NULL` if the allocation fails.
+- **External functions**: `malloc`
+- **Description**: Applies the function `f` to each character of the string `s`, passing its index as the first argument and the character itself as the second. A new string is created (using `malloc(3)`) to collect the results.
+
+### Function: `ft_striteri`
+
+- **Prototype**: `void ft_striteri(char *s, void (*f)(unsigned int, char*));`
+- **Parameters**:
+  - `s`: The string on which to iterate.
+  - `f`: The function to apply to each character.
+- **Return value**: None
+- **External functions**: None
+- **Description**: Applies the function `f` on each character of the string passed as an argument, passing its index as the first argument. Each character is passed by address to `f` to be modified if necessary.
+
+### Function: `ft_putchar_fd`
+
+- **Prototype**: `void ft_putchar_fd(char c, int fd);`
+- **Parameters**:
+  - `c`: The character to output.
+  - `fd`: The file descriptor on which to write.
+- **Return value**: None
+- **External functions**: `write`
+- **Description**: Outputs the character `c` to the given file descriptor.
+
+---
+
+### Function: `ft_putstr_fd`
+
+- **Prototype**: `void ft_putstr_fd(char *s, int fd);`
+- **Parameters**:
+  - `s`: The string to output.
+  - `fd`: The file descriptor on which to write.
+- **Return value**: None
+- **External functions**: `write`
+- **Description**: Outputs the string `s` to the given file descriptor.
+
+### Function: `ft_putendl_fd`
+
+- **Prototype**: `void ft_putendl_fd(char *s, int fd);`
+- **Parameters**:
+  - `s`: The string to output.
+  - `fd`: The file descriptor on which to write.
+- **Return value**: None
+- **External functions**: `write`
+- **Description**: Outputs the string `s` to the given file descriptor, followed by a newline.
+
+### Function: `ft_putnbr_fd`
+
+- **Prototype**: `void ft_putnbr_fd(int n, int fd);`
+- **Parameters**:
+  - `n`: The integer to output.
+  - `fd`: The file descriptor on which to write.
+- **Return value**: None
+- **External functions**: `write`
+- **Description**: Outputs the integer `n` to the given file descriptor.
 
 ---
 
