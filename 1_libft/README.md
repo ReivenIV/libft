@@ -52,7 +52,7 @@ You must redo a set of functions from the libc with the same prototypes and beha
 - [x] strchr
 - [x] strrchr
 - [x] strncmp
-- [ ] memchr
+- [x] memchr
 - [ ] memcmp
 - [ ] strnstr
 - [x] atoi
