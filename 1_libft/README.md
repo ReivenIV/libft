@@ -59,14 +59,13 @@ You must redo a set of functions from the libc with the same prototypes and beha
 
 Use `malloc()` for:
 - [x] ft_calloc
-- [ ] ft_strdup
+- [x] ft_strdup
 
 ---
 
 ## III.3 Part 2 - Additional Functions
 
-
-- [ ] **ft_substr**
+- [x] **ft_substr**
 - [ ] **ft_strjoin**
 - [ ] **ft_strtrim**
 - [ ] **ft_split**
@@ -77,7 +76,6 @@ Use `malloc()` for:
 - [ ] **ft_putstr_fd**
 - [ ] **ft_putendl_fd**
 - [ ] **ft_putnbr_fd**
-
 
 
 In this second part, you must develop a set of functions that are either not in the libc or are part of it but in a different form. Some of the following functions can be useful for writing the functions of Part 1.
@@ -94,6 +92,64 @@ In this second part, you must develop a set of functions that are either not in 
 - **External functions**: `malloc`
 - **Description**: Allocates (with `malloc(3)`) and returns a substring from the string `s`. The substring begins at index `start` and is of maximum size `len`.
 
+The function `ft_substr` is a classic C programming exercise that teaches how to dynamically create a substring from a given string. Here’s how it works and what you can expect from it with some examples.
+
+### Function Breakdown
+
+The function prototype is:
+```c
+char *ft_substr(char const *s, unsigned int start, size_t len);
+```
+
+- **Parameters**:
+  - `s`: The original string from which the substring is created.
+  - `start`: The index in the original string `s` where the substring should begin.
+  - `len`: The maximum number of characters to include in the substring.
+
+- **Return Value**: The function returns a pointer to the newly allocated substring. If the allocation fails, it returns `NULL`.
+
+- **Behavior**:
+  1. **Memory Allocation**: It dynamically allocates enough memory for the substring, which means you’ll need to free this memory when you’re done using the substring.
+  2. **Copying Characters**: The function copies up to `len` characters starting from `start` in the original string `s`.
+  3. **Handling Edge Cases**: If `start` is beyond the end of the string, or if `len` is too large, the function should handle these gracefully, often returning an empty string if `start` is out of bounds.
+
+### Example Scenarios
+
+#### Example 1
+```c
+char *str = "Hello, World!";
+char *result = ft_substr(str, 7, 5); // start at index 7, length 5
+```
+
+- **Expected Output**: `"World"`
+- **Explanation**: Starting at index 7 in `"Hello, World!"`, the substring includes up to 5 characters (`"World"`).
+
+#### Example 2
+```c
+char *str = "Hello, World!";
+char *result = ft_substr(str, 7, 20); // start at index 7, length 20
+```
+
+- **Expected Output**: `"World!"`
+- **Explanation**: Although `len` is 20, the substring will stop at the end of the original string because there aren’t enough characters left.
+
+#### Example 3
+```c
+char *str = "Hello, World!";
+char *result = ft_substr(str, 50, 5); // start at index 50, length 5
+```
+
+- **Expected Output**: `""` (an empty string)
+- **Explanation**: Since `start` is beyond the end of the string, the function should return an empty substring.
+
+### Edge Cases
+1. **Empty String Input**: If `s` is an empty string, `ft_substr` should return an empty string regardless of `start` or `len`.
+2. **NULL Input**: If `s` is `NULL`, the function should return `NULL` to indicate an error.
+
+This function is an excellent way to practice dynamic memory management, string manipulation, and edge case handling in C.
+
+---
+
 ### Function: `ft_strjoin`
 
 - **Prototype**: `char *ft_strjoin(char const *s1, char const *s2);`
@@ -108,10 +164,6 @@ In this second part, you must develop a set of functions that are either not in 
 Here’s the markdown version of the additional functions described in the PDFs:
 
 ---
-
-# Libft - Your Very First Own Library
-
-## Additional Functions
 
 ### Function: `ft_strtrim`
 
