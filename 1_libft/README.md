@@ -65,7 +65,7 @@ Use `malloc()` for:
 
 ## III.3 Part 2 - Additional Functions
 
-- [x] <a name="ft_substr"></a>
+<a name="ft_substr">ft_substr</a>
 - [ ] **ft_strjoin**
 - [ ] **ft_strtrim**
 - [ ] **ft_split**
