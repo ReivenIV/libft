@@ -65,7 +65,7 @@ Use `malloc()` for:
 
 ## III.3 Part 2 - Additional Functions
 
-<a name="ft_substr">ft_substr</a>
+<a name="test_ft_substr">ft_substr</a>
 - [ ] **ft_strjoin**
 - [ ] **ft_strtrim**
 - [ ] **ft_split**
@@ -82,7 +82,7 @@ In this second part, you must develop a set of functions that are either not in 
 
 ---
 
-### [ft_substr](#ft_substr)
+### [ft_substr](test_ft_substr)
 
 - **Prototype**: `char *ft_substr(char const *s, unsigned int start, size_t len);`
 - **Turn in files**: -
