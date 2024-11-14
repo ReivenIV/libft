@@ -96,7 +96,8 @@ In this second part, you must develop a set of functions that are either not in 
 
 The function `ft_substr` is a classic C programming exercise that teaches how to dynamically create a substring from a given string. Here’s how it works and what you can expect from it with some examples.
 
-### Function Breakdown
+<details>
+<summary>Function Breakdown</summary>
 
 The function prototype is:
 ```c
@@ -150,9 +151,15 @@ char *result = ft_substr(str, 50, 5); // start at index 50, length 5
 
 This function is an excellent way to practice dynamic memory management, string manipulation, and edge case handling in C.
 
----
+</details>
 
-### Function: `ft_strjoin`
+
+-------
+
+
+
+
+# ft_strjoin
 
 - **Prototype**: `char *ft_strjoin(char const *s1, char const *s2);`
 - **Turn in files**: -
@@ -167,7 +174,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 
 ---
 
-### Function: `ft_strtrim`
+# ft_strtrim
 
 - **Prototype**: `char *ft_strtrim(char const *s1, char const *set);`
 - **Parameters**:
@@ -177,7 +184,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **External functions**: `malloc`
 - **Description**: Allocates (with `malloc(3)`) and returns a copy of `s1` with the characters specified in `set` removed from the beginning and the end of the string.
 
-### Function: `ft_split`
+# ft_split
 
 - **Prototype**: `char **ft_split(char const *s, char c);`
 - **Parameters**:
@@ -187,7 +194,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **External functions**: `malloc`, `free`
 - **Description**: Allocates (with `malloc(3)`) and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter. The array ends with a `NULL` pointer.
 
-### Function: `ft_itoa`
+# ft_itoa
 
 - **Prototype**: `char *ft_itoa(int n);`
 - **Parameters**:
@@ -198,7 +205,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 
 ---
 
-### Function: `ft_strmapi`
+# ft_strmapi
 
 - **Prototype**: `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));`
 - **Parameters**:
@@ -208,7 +215,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **External functions**: `malloc`
 - **Description**: Applies the function `f` to each character of the string `s`, passing its index as the first argument and the character itself as the second. A new string is created (using `malloc(3)`) to collect the results.
 
-### Function: `ft_striteri`
+# ft_striteri
 
 - **Prototype**: `void ft_striteri(char *s, void (*f)(unsigned int, char*));`
 - **Parameters**:
@@ -218,7 +225,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **External functions**: None
 - **Description**: Applies the function `f` on each character of the string passed as an argument, passing its index as the first argument. Each character is passed by address to `f` to be modified if necessary.
 
-### Function: `ft_putchar_fd`
+# ft_putchar_fd
 
 - **Prototype**: `void ft_putchar_fd(char c, int fd);`
 - **Parameters**:
@@ -230,7 +237,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 
 ---
 
-### Function: `ft_putstr_fd`
+# ft_putstr_fd
 
 - **Prototype**: `void ft_putstr_fd(char *s, int fd);`
 - **Parameters**:
@@ -240,7 +247,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **External functions**: `write`
 - **Description**: Outputs the string `s` to the given file descriptor.
 
-### Function: `ft_putendl_fd`
+# ft_putendl_fd
 
 - **Prototype**: `void ft_putendl_fd(char *s, int fd);`
 - **Parameters**:
@@ -250,7 +257,7 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **External functions**: `write`
 - **Description**: Outputs the string `s` to the given file descriptor, followed by a newline.
 
-### Function: `ft_putnbr_fd`
+# ft_putnbr_fd
 
 - **Prototype**: `void ft_putnbr_fd(int n, int fd);`
 - **Parameters**:
