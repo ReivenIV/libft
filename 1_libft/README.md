@@ -65,7 +65,7 @@ Use `malloc()` for:
 
 ## III.3 Part 2 - Additional Functions
 
-- [x] **ft_substr**
+- [x] <a name="ft_substr"></a>
 - [ ] **ft_strjoin**
 - [ ] **ft_strtrim**
 - [ ] **ft_split**
@@ -80,7 +80,9 @@ Use `malloc()` for:
 
 In this second part, you must develop a set of functions that are either not in the libc or are part of it but in a different form. Some of the following functions can be useful for writing the functions of Part 1.
 
-### Function: `ft_substr`
+---
+
+### [ft_substr](#ft_substr)
 
 - **Prototype**: `char *ft_substr(char const *s, unsigned int start, size_t len);`
 - **Turn in files**: -
