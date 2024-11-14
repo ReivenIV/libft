@@ -66,7 +66,7 @@ Use `malloc()` for:
 ## III.3 Part 2 - Additional Functions
 
 - [x] [ft_substr](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_substr)
-- [ ] [ft_strjoin](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strjoin)
+- [x] [ft_strjoin](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strjoin)
 - [ ] [ft_strtrim](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strtrim)
 - [ ] [ft_split](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_split)
 - [ ] [ft_itoa](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_itoa)
@@ -96,8 +96,8 @@ In this second part, you must develop a set of functions that are either not in 
 
 The function `ft_substr` is a classic C programming exercise that teaches how to dynamically create a substring from a given string. Here’s how it works and what you can expect from it with some examples.
 
-<!--! pliable content -->
 <details>
+<!--! pliable content -->
 
 <summary>Function Breakdown and tips</summary>
 
@@ -153,9 +153,9 @@ char *result = ft_substr(str, 50, 5); // start at index 50, length 5
 
 This function is an excellent way to practice dynamic memory management, string manipulation, and edge case handling in C.
 
+<!--! end pliable content -->
 </details>
 
-<!--! end pliable content -->
 
 -------
 
