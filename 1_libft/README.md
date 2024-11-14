@@ -65,7 +65,7 @@ Use `malloc()` for:
 
 ## III.3 Part 2 - Additional Functions
 
-ft_substr](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_substr)
+[ft_substr](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_substr)
 - [ ] **ft_strjoin**
 - [ ] **ft_strtrim**
 - [ ] **ft_split**
