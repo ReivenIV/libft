@@ -66,16 +66,16 @@ Use `malloc()` for:
 ## III.3 Part 2 - Additional Functions
 
 - [x] [ft_substr](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_substr)
-- [ ] **ft_strjoin**
-- [ ] **ft_strtrim**
-- [ ] **ft_split**
-- [ ] **ft_itoa**
-- [ ] **ft_strmapi**
-- [ ] **ft_striteri**
-- [ ] **ft_putchar_fd**
-- [ ] **ft_putstr_fd**
-- [ ] **ft_putendl_fd**
-- [ ] **ft_putnbr_fd**
+- [ ] [ft_strjoin](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strjoin)
+- [ ] [ft_strtrim](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strtrim)
+- [ ] [ft_split](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_split)
+- [ ] [ft_itoa](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_itoa)
+- [ ] [ft_strmapi](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strmapi)
+- [ ] [ft_striteri](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_striteri)
+- [ ] [ft_putchar_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putchar_fd)
+- [ ] [ft_putstr_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putstr_fd)
+- [ ] [ft_putendl_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putendl_fd)
+- [ ] [ft_putnbr_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putnbr_fd)
 
 
 In this second part, you must develop a set of functions that are either not in the libc or are part of it but in a different form. Some of the following functions can be useful for writing the functions of Part 1.
@@ -96,8 +96,10 @@ In this second part, you must develop a set of functions that are either not in 
 
 The function `ft_substr` is a classic C programming exercise that teaches how to dynamically create a substring from a given string. Here’s how it works and what you can expect from it with some examples.
 
+<!--! pliable content -->
 <details>
-<summary>Function Breakdown</summary>
+
+<summary>Function Breakdown and tips</summary>
 
 The function prototype is:
 ```c
@@ -153,11 +155,9 @@ This function is an excellent way to practice dynamic memory management, string 
 
 </details>
 
+<!--! end pliable content -->
 
 -------
-
-
-
 
 # ft_strjoin
 
