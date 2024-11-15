@@ -6,12 +6,12 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:33:22 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:08:52 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:50:53 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * The memcpy function in C is used to copy a specified number of bytes 
+ * `memcpy` : is used to copy a specified number of bytes 
  * from one memory location to another. 
  * memcpy is commonly used when you need to copy blocks of raw data, 
  * like arrays, structs, or memory buffers, without altering 
