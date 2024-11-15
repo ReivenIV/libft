@@ -6,12 +6,12 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:01:11 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:05:20 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:19:36 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * strncmp function in C compares up to a specified number 
+ * `strncmp` compares up to a specified number 
  * of characters between two strings.
  * 
  * Returns 0 if the first n characters of both strings are equal.
@@ -30,10 +30,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (s1[i] == '\0' && s2[i] == '\0')
 		return (0);
-	while (i < n)
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);
@@ -90,7 +90,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 //     const char str14[] = "hello there";
 // 	// Only first 5 chars should match
 //     printf("6 : %s%d%s\n", GREEN, ft_strncmp(str13, str14, 5), RESET);
-//     printf("6R: %s%d%s\n", GREEN, strncmp(str13, str14, 5), RESET);
+//     printf("6R: %s%d%s\n\n", GREEN, strncmp(str13, str14, 5), RESET);
+
+//     // Edge case with null terminator
+//     const char str15[] = "test\200";
+//     const char str16[] = "test\0";
+//     printf("7 : %s%d%s\n", GREEN, ft_strncmp(str15, str16, 6), RESET);
+//     printf("7 : %s%d%s\n\n", GREEN, strncmp(str15, str16, 6), RESET);
 
 //     return 0;
 // }

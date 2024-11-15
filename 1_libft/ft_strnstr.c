@@ -6,26 +6,26 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:28:15 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:54:01 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:55:15 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	if (s2[i] == '\0')
-		return (0);
+	if (needle[i] == '\0')
+		return ((char *)&s1[0]);
 	while (i < len)
 	{
 		j = 0;
-		while (s2[j] != '\0' && s1[i + j] == s2[j] && (i + j) < len)
+		while (needle[j] != '\0' && s1[i + j] == needle[j] && (i + j) < len)
 			j++;
-		if (s2[j] == '\0')
+		if (needle[j] == '\0')
 			return ((char *)&s1[i]);
 		i++;
 	}
@@ -47,12 +47,12 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 //     // Edge case 2: Needle at the beginning
 //     char haystack2[] = "good morning";
-//     char needle2[] = "good";
+//     char needle2[] = "od";
 //     char *result2 = ft_strnstr(haystack2, needle2, sizeof(haystack2));
 //     printf("2: %s%s%s\n", GREEN, result2 ? result2 : "Not found", RESET);
 // 	// output: "good morning"
 
-//     // Edge case 3: Needle at the end
+//     // Edge case 3: Needle middle
 //     char haystack3[] = "Proin dictum est non purus malesuada eleifend. ";
 //     char needle3[] = "est";
 //     char *result3 = ft_strnstr(haystack3, needle3, sizeof(haystack3));
@@ -70,7 +70,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 //     // Edge case 5: Zero-length needle
 //     char needle5[] = "";
 //     char *result5 = ft_strnstr(haystack1, needle5, sizeof(haystack1));
-//     printf("5: %s%s%s\n", GREEN, result5 ? result5 : "Not found", RESET); 
+//     printf("5: %s%s%s\n", GREEN, result5 ? result5 : "Not found", RESET);
 // 	// output: "hello world" (since empty string is found everywhere)
 
 //     // Edge case 6: Haystack shorter than needle
