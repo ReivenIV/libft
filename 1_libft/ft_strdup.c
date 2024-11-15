@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:07:53 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 13:36:42 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:06:08 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strdup(const char *str)
 		i++;
 	}
 	dup[i] = '\0';
-	return (dup);	
+	return (dup);
 }
 
 // #include <stdio.h>
@@ -77,6 +77,6 @@ char	*ft_strdup(const char *str)
 //     char *dup5 = ft_strdup(str5);
 //     printf("5: %s%s%s\n", GREEN, dup5, RESET);
 //     free(dup5);
-	
+
 //     return 0;
 // }

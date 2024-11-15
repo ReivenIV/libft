@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:19:16 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:54:26 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:54:42 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen7(const char *str)
 {
 	size_t	count;
 
@@ -41,7 +41,7 @@ char	*ft_strrchr(const char *src, int target)
 	char	*str;
 
 	str = (char *)src;
-	i = ft_strlen(str);
+	i = ft_strlen7(str);
 	if (target == '\0')
 		return (&str[i]);
 	while (i-- > 0)

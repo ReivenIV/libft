@@ -6,15 +6,15 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 14:24:42 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:08:28 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
-#include <stdlib.h>
+# include <string.h>
+# include <stdlib.h>
 
 int		ft_atoi(const char *str);
 void	*ft_memset(void *buffer, int simbol, size_t size);

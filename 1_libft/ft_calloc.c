@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:49:39 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:46:01 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:28:50 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_calloc(size_t amount, size_t type_size)
 	{
 		((int *)tmp)[i] = 0;
 		i++;
-	}	
+	}
 	return (tmp);
 }
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:30:32 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 13:34:53 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:28:50 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen8(const char *str)
 {
 	size_t	count;
 
@@ -25,7 +25,7 @@ size_t	ft_strlen(const char *str)
 	return (count);
 }
 
-char	*ft_strdup(const char *str)
+char	*ft_strdup3(const char *str)
 {
 	int		i;
 	int		str_len;
@@ -34,7 +34,7 @@ char	*ft_strdup(const char *str)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	str_len = ft_strlen(str);
+	str_len = ft_strlen8(str);
 	dup = (char *)malloc(str_len * sizeof(char) + 1);
 	if (dup == NULL)
 		return (NULL);
@@ -44,41 +44,41 @@ char	*ft_strdup(const char *str)
 		i++;
 	}
 	dup[i] = '\0';
-	return (dup);	
+	return (dup);
 }
 
-char *ft_substr(char const *src, unsigned int start, size_t len)
+char	*ft_substr(char const *src, unsigned int start, size_t len)
 {
-    size_t i;         
-    size_t src_len;   
-    char *str;        
+	size_t	i;
+	size_t	src_len;
+	char	*str;
 
-    if (src == NULL)
-        return (NULL);
-    src_len = ft_strlen(src);
+	if (src == NULL)
+		return (NULL);
+	src_len = ft_strlen8(src);
 	// Handle the case where `start` is beyond the end of `src`
 	// If `start` is greater than or equal to `src_len`,
 	// there's no valid substring
 	// to extract, so we return an empty string.
-    if (start >= src_len)
-        return (ft_strdup(""));
+	if (start >= src_len)
+		return (ft_strdup3(""));
 	// Adjust `len` if it exceeds the available characters in `src`
 	// If `start + len` goes beyond the end of `src`, 
 	// adjust `len` to fit within bounds.
-    if (start + len > src_len)
+	if (start + len > src_len)
 		// handles `len`
-        len = src_len - start;
-    str = malloc((len + 1) * sizeof(char));
-    if (str == NULL)
-        return (NULL);
-    i = 0;  
-    while (i < len && src[start + i] != '\0')
-    {
-        str[i] = src[start + i];
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
+		len = src_len - start;
+	str = malloc((len + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len && src[start + i] != '\0')
+	{
+		str[i] = src[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
 // #include <stdio.h>
