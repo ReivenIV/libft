@@ -6,12 +6,11 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:49:39 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/13 18:06:11 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:46:01 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t amount, size_t type_size)
 {

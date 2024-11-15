@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:52:54 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 17:54:45 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:41:36 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 * ft_bzero is like memset it used to set a block of memory to a 
 * specific value, byte by byte. The only difference is 
 */
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_bzero(void *buffer, size_t size)
 {

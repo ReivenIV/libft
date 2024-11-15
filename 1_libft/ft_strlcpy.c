@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:12:58 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 17:11:06 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:30:24 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
  * vulnerabilities.
  */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen4(const char *str)
 {
 	size_t	count;
 
@@ -42,7 +42,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	}
 	dest[i] = '\0';
-	return (ft_strlen(src));
+	return (ft_strlen4(src));
 }
 
 // #include <stdio.h>

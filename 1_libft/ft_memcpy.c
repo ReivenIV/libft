@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:33:22 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 13:25:08 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:56:12 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * well "memmove" is used in such cases.
  */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *str_dest, const void *str_src, size_t n)
 {

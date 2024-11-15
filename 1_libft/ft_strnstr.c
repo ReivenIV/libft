@@ -6,11 +6,11 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:28:15 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/13 15:17:15 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:54:01 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {

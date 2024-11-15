@@ -6,12 +6,14 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:26:38 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 12:58:37 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:47:33 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // * The isdigit function in C is used to check if a given character 
 // * is a decimal digit (0 to 9). 
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

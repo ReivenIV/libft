@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:01:11 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/12 17:38:56 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:53:41 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * 		a greater ASCII value in str2
 */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

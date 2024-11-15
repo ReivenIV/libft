@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:58:14 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 14:24:46 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:23:07 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int atoi(const char *str)
 {
 	int	i;
 	int	power;

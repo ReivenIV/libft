@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:00:49 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 15:39:28 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:46:44 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 * It helps ensure that data contains expected types of characters,
 * such as checking if a user entered only letters in a name field.
 */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

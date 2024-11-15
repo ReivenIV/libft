@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:52:58 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 12:58:53 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:47:13 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 *   which can include extended characters or special symbols 
 *		in non-ASCII encodings.
 */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:14:25 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/12 16:12:36 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:50:01 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * ft_strchr("hello", 'z') // output : NULL
 */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *src, int target)
 {

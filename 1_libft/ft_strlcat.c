@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:14:02 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/12 12:34:16 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:51:48 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
   REMINDER : strlcat will transfer data to dest until size-1 (for '\0') 
  */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

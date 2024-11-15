@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:08:44 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/07 16:15:50 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:48:40 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 * Returns 0 (false) if the character is not printable,
 * such as control characters (e.g., newline, tab, etc.).
 */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

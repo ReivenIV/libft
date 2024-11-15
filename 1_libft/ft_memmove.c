@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:03:25 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 15:09:49 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:49:46 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
   *  from the end
 */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *str_dest, const void *str_src, size_t size)
 {

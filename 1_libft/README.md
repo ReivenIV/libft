@@ -21,6 +21,9 @@ This project is about coding a C library.
 
 # Mandatory Part
 
+- [x] libft.h
+- [x] makefile 
+
 **Program name:** `libft.a`  
 **Turn in files:** `Makefile`, `libft.h`, `ft_*.c`  
 **Makefile rules:** `NAME`, `all`, `clean`, `fclean`, `re`  

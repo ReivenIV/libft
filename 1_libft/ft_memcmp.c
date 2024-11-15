@@ -6,11 +6,11 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:40:03 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/13 12:26:42 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:49:23 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {

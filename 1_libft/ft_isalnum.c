@@ -6,13 +6,15 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:43:11 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 12:58:22 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:46:22 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // * The isalnum function in C checks if a given character 
 // * is alphanumeric, meaning 
 // * it’s either a letter (uppercase or lowercase) or a digit (0 to 9).
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

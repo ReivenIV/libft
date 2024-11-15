@@ -6,15 +6,14 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:30:32 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/14 17:47:16 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:34:53 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // for more information about ft_substr check the readme section.
 // https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_substr
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:43:30 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/13 11:37:42 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:35:59 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@
 REMINDER : check dif_between_memchr_&strchr.md
 */
 
-#include <string.h>
+#include "libft.h"
 
 // target = c = char. 
 void	*ft_memchr(const void *src, int c, size_t amount)
 {
 	size_t			i;
 	unsigned char	*str;
-	unsigned char	*target;
+	unsigned char	target;
 
 	target = (unsigned char)c;
 	str = (unsigned char *)src;

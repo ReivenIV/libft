@@ -6,9 +6,11 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/08 15:46:53 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:55:20 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 //*	These functions convert uppercase letters to lowercase.
 

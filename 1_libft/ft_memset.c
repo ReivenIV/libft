@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:49:37 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/11 13:01:26 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:44:50 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 * `ft_memset` is used to set a block of memory to a 
 * specific value, byte by byte.
 */
-#include <stddef.h>
+
+#include "libft.h"
 
 void	*ft_memset(void *buffer, int simbol, size_t size)
 {
@@ -33,6 +34,7 @@ void	*ft_memset(void *buffer, int simbol, size_t size)
 /*
 #include <stdio.h>
 #include <string.h>
+#include <stddef.h>
 
 int main() {    
     // Example 1: Initialize an integer array to zero

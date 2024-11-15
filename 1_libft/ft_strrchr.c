@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:19:16 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/12 16:29:12 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:54:26 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
   REMINDER : is strchr but reversed.
 */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

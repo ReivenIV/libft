@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:07:53 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/14 11:25:57 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:36:42 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
  * strdup will duplicate a string using malloc.
 */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(const char *str)
+int	ft_strlen2(const char *str)
 {
 	int	count;
 
@@ -36,7 +35,7 @@ char	*ft_strdup(const char *str)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	str_len = ft_strlen(str);
+	str_len = ft_strlen2(str);
 	dup = (char *)malloc(str_len * sizeof(char) + 1);
 	if (dup == NULL)
 		return (NULL);
