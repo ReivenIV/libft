@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:14:25 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:50:01 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:17:07 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
  * ft_strchr("hello", '\0') // output : '\0'
  * ft_strchr("hello", 'z') // output : NULL
 */
+// L33 we use unsigned char in case target is bigger than ASCII.255 
 
 #include "libft.h"
 
@@ -29,7 +30,7 @@ char	*ft_strchr(const char *src, int target)
 	str = (char *)src;
 	while (str[i] != '\0')
 	{
-		if (str[i] == target)
+		if ((unsigned char)str[i] == (unsigned char)target)
 			return (&str[i]);
 		i++;
 	}
@@ -72,6 +73,12 @@ char	*ft_strchr(const char *src, int target)
 // 	char ch5 = '\0';
 // 	char *result5 = ft_strchr(str5, ch5);
 // 	printf("output: %s%s%s\n", GREEN, result5 ? result5 : "NULL", RESET);
+
+//     // Edge case 6: Null char search
+// 	char str6[] = "hello";
+// 	char ch6 = 350;
+// 	char *result6 = ft_strchr(str6, ch6);
+// 	printf("output: %s%s%s\n", GREEN, result6 ? result6 : "NULL", RESET);
 
 // 	return (0);
 // }
