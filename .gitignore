@@ -3,7 +3,5 @@
 *.out
 *.a
 *.o
-testing
+*.exe
 .vscode
-build
-deboug
