@@ -41,5 +41,7 @@ char	*ft_substr(char const *src, unsigned int start, size_t len);
 char	ft_tolower(char str);
 char	ft_toupper(char str);
 void	*ft_memcpy(void *str_dest, const void *str_src, size_t n);
+char	*ft_itoa(int src_n);
+char	*ft_strndup(const char *src, size_t start, size_t end);
 
 #endif

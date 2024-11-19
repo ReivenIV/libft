@@ -10,16 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int is_charset(char c, char charset)
+static int	is_charset(char c, char charset);
+static int	count_words(const char *src, char charset);
+static int	splitter(char **dest, const char *src, char charset);
+
+static int is_charset(char c, char charset)
 {
 	if (charset == c)
 		return (1);
 	return (0);
 }
 
-int	count_words(const char *src, char charset)
+static int	count_words(const char *src, char charset)
 {
 	size_t	i;
 	size_t	count;
@@ -120,7 +124,7 @@ char	*ft_strndup(const char *src, size_t start, size_t end)
 // //     return 0;
 // // }
 
-int	splitter(char **dest, const char *src, char charset)
+static int	splitter(char **dest, const char *src, char charset)
 {
 	size_t	i;
 	size_t	j;
