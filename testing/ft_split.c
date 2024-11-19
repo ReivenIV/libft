@@ -21,8 +21,8 @@ int is_charset(char c, char charset)
 
 int	count_words(const char *src, char charset)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
 	count = 0;
@@ -41,12 +41,12 @@ int	count_words(const char *src, char charset)
 	return (count);
 }
 
-char	*ft_strndup(const char *src, int start, int end)
+char	*ft_strndup(const char *src, size_t start, size_t end)
 {
-	int		i;
+	size_t		i;
 	char	*dest;
 
-	if (src == NULL || start > end || start < 0)
+	if (src == NULL || start > end )
 		return (NULL);
 	dest = malloc((end - start + 2) * sizeof(char));
 	if (dest == NULL)
@@ -122,10 +122,10 @@ char	*ft_strndup(const char *src, int start, int end)
 
 int	splitter(char **dest, const char *src, char charset)
 {
-	int	i;
-	int	j;
-	int	start;
-	int	end;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+	size_t	end;
 
 	i = 0;
 	j = 0;
@@ -211,65 +211,46 @@ char	**ft_split(const char *src, char charset) {
 }
 
 //!  Main function to test ft_split
-#include <stdio.h>
-// // int main(void)
-// // {
-// //     char src[] = ",:;test,patate;;ananas,.,.salade,;:";
-// //     char charset = ',';
-// //     char **result = ft_split(src, charset);
-// //     int i = 0;
-
-// //     printf("Word count: %d\n", count_words(src, charset));
-// //     while (i < 5)
-// //     {
-// //         printf("res[%d] :: %s\n", i, result[i]);
-// //         free(result[i]);
-// //         i++;
+// // #include <stdio.h>
+// // void print_split(char **split) {
+// //     for (int i = 0; split[i]; i++) {
+// //         printf("Segment %d: '%s'\n", i, split[i]);
+// //         free(split[i]);
 // //     }
-// //     free(result);
-// //     return (0);
+// //     free(split);
 // // }
 
-// void print_split(char **split) {
-//     for (int i = 0; split[i]; i++) {
-//         printf("Segment %d: '%s'\n", i, split[i]);
-//         free(split[i]);
-//     }
-//     free(split);
-// }
+// // int main() {
+// //     char **result;
 
-// int main() {
-//     char **result;
+// //     // Test 1: Basic string with delimiters
+// //     result = ft_split("Hello#World#42", '#');
+// //     printf("Test 1:\n");
+// //     print_split(result);
+// //     // Expected Output:
+// //     // Segment 0: 'Hello'
+// //     // Segment 1: 'World'
+// //     // Segment 2: '42'
 
-//     // Test 1: Basic string with delimiters
-//     result = ft_split("Hello:World:42", ':');
-//     printf("Test 1:\n");
-//     print_split(result);
-//     // Expected Output:
-//     // Segment 0: 'Hello'
-//     // Segment 1: 'World'
-//     // Segment 2: '42'
+// //     // Test 2: Empty string
+// //     printf("Test 2:\n");
+// //     result = ft_split("", ':');
+// //     print_split(result);
+// //     // Expected Output:
+// //     // (No output for empty string)
 
-//     // Test 2: Empty string
-//     printf("Test 2:\n");
-//     result = ft_split("", ':');
-//     print_split(result);
-//     // Expected Output:
-//     // (No output for empty string)
+// //     // Test 3: String with only delimiters
+// //     result = ft_split(":::", ':');
+// //     printf("Test 3:\n");
+// //     print_split(result);
+// //     // Expected Output:
+// //     // (No output for string with only delimiters)
 
-//     // Test 3: String with only delimiters
-//     result = ft_split(":::", ':');
-//     printf("Test 3:\n");
-//     print_split(result);
-//     // Expected Output:
-//     // (No output for string with only delimiters)
-
-//     // Test 4: String with no delimiters
-//     result = ft_split("NoDelimitersHere", ':');
-//     printf("Test 4:\n");
-//     print_split(result);
-//     // Expected Output:
-//     // Segment 0: 'NoDelimitersHere'
-
-//     return 0;
-// }
+// //     // Test 4: String with no delimiters
+// //     result = ft_split("NoDelimitersHere", ':');
+// //     printf("Test 4:\n");
+// //     print_split(result);
+// //     // Expected Output:
+// //     // Segment 0: 'NoDelimitersHere'
+// //     return 0;
+// // }
