@@ -1,6 +1,4 @@
-Here’s an updated Markdown with comments embedded in the code:
 
-```markdown
 # `ft_itoa` Implementation
 
 ## Overview
@@ -136,7 +134,5 @@ ft_itoa(-2147483648) = "-2147483648"
 ft_itoa(2147483647) = "2147483647"
 ```
 
-
 ## Conclusion
 This implementation of `ft_itoa` is efficient, robust, and well-tested, making it suitable for use in a wide variety of applications.
-```
