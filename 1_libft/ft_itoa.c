@@ -96,6 +96,7 @@ static char	*create_str(long src_n, long n_len)
 // //     free(result);
 // //     return 0;
 // // }
+//! ---
 
 // We count how many numbers we have in n (necesary for malloc)
 static int	count_n(long n)
@@ -133,3 +134,4 @@ static int	count_n(long n)
 
 // //     return 0;
 // // }
+//! ---
