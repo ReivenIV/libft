@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:43:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 17:01:27 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:17:02 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *src, void (*f)(unsigned int, char*))
 	size_t	i;
 
 	if (!src || !f)
-		return;
+		return ;
 	i = 0;
 	while (src[i] != '\0')
 	{

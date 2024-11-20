@@ -6,11 +6,9 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:21:27 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 16:13:18 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:16:32 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// charset = chars to check infividually.
 
 #include "libft.h"
 
@@ -42,26 +40,18 @@ char	*ft_strtrim(char const *s1, char const *charset)
 		return (ft_strdup(s1));
 	i = 0;
 	k = 0;
-	j =  ft_strlen(s1) - 1;	
-	// Find coordinates for start (i) and end (j)  with is_charset. 
+	j = ft_strlen(s1) - 1;
 	while (is_charset(s1[i], charset) == 1 && s1[i] != '\0')
 		i++;
 	while (is_charset(s1[j], charset) == 1 && s1[j] > 0)
 		j--;
 	if (i > j)
 		return (strdup(""));
-	// Amount of caracters needed for malloc y - x (no need of strlen).	
-	// +2. for the str[0] and the null terminator.
 	str = malloc((j - i + 2) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	// Add data to str (while).
-	while (i < j+1)
-	{
-		str[k] = s1[i];
-		i++;
-		k++;
-	}
+	while (i < j + 1)
+		str[k++] = s1[i++];
 	str[k] = '\0';
 	return (str);
 }
@@ -77,70 +67,80 @@ char	*ft_strtrim(char const *s1, char const *charset)
 //     char s1_1[] = "?#Hello, World!#?";
 //     char set_1[] = "#?";
 //     char *result1 = ft_strtrim(s1_1, set_1);
-//     printf("1: %s%s%s\n", GREEN, result1, RESET); // Expected: "Hello, World!"
+//     printf("1: %s%s%s\n", GREEN, result1, RESET);
+//     Expected: "Hello, World!"
 //     free(result1);
 
 //     // // Edge case 2: Trimming special characters
 //     // char s1_2[] = "!!!!Welcome to C!!!!";
 //     // char set_2[] = "!";
 //     // char *result2 = ft_strtrim(s1_2, set_2);
-//     // printf("2: %s%s%s\n", GREEN, result2, RESET); // Expected: "Welcome to C"
+//     // printf("2: %s%s%s\n", GREEN, result2, RESET); 
+//// Expected: "Welcome to C"
 //     // free(result2);
 
 //     // // Edge case 3: Trimming multiple characters
 //     // char s1_3[] = "xx---Test---xx";
 //     // char set_3[] = "x-";
 //     // char *result3 = ft_strtrim(s1_3, set_3);
-//     // printf("3: %s%s%s\n", GREEN, result3, RESET); // Expected: "Test"
+//     // printf("3: %s%s%s\n", GREEN, result3, RESET);
+// // Expected: "Test"
 //     // free(result3);
 
 //     // // Edge case 4: No characters to trim
 //     // char s1_4[] = "NoTrimHere";
 //     // char set_4[] = "xyz";
 //     // char *result4 = ft_strtrim(s1_4, set_4);
-//     // printf("4: %s%s%s\n", GREEN, result4, RESET); // Expected: "NoTrimHere"
+//     // printf("4: %s%s%s\n", GREEN, result4, RESET);
+//// Expected: "NoTrimHere"
 //     // free(result4);
 
 //     // // Edge case 5: Empty string
 //     // char s1_5[] = "";
 //     // char set_5[] = "x ";
 //     // char *result5 = ft_strtrim(s1_5, set_5);
-//     // printf("5: %s%s%s\n", GREEN, result5, RESET); // Expected: ""
+//     // printf("5: %s%s%s\n", GREEN, result5, RESET);
+// // Expected: ""
 //     // free(result5);
 
 //     // // Edge case 6: Empty set
 //     // char s1_6[] = "TrimNothing";
 //     // char set_6[] = "";
 //     // char *result6 = ft_strtrim(s1_6, set_6);
-//     // printf("6: %s%s%s\n", GREEN, result6, RESET); // Expected: "TrimNothing"
+//     // printf("6: %s%s%s\n", GREEN, result6, RESET);
+// // Expected: "TrimNothing"
 //     // free(result6);
 
 //     // // Edge case 7: All characters in set
 //     // char s1_7[] = "aaaa";
 //     // char set_7[] = "a";
 //     // char *result7 = ft_strtrim(s1_7, set_7);
-//     // printf("7: %s%s%s\n", GREEN, result7, RESET); // Expected: ""
+//     // printf("7: %s%s%s\n", GREEN, result7, RESET);
+// // Expected: ""
 //     // free(result7);
 
 //     // // Edge case 8: String contains only characters from set
 //     // char s1_8[] = "xxxxxxxx";
 //     // char set_8[] = "x";
 //     // char *result8 = ft_strtrim(s1_8, set_8);
-//     // printf("8: %s%s%s\n", GREEN, result8, RESET); // Expected: ""
+//     // printf("8: %s%s%s\n", GREEN, result8, RESET);
+// // Expected: ""
 //     // free(result8);
 
 //     // // Edge case 9: Trimming whitespace characters
 //     // char s1_9[] = " \t\n Trimmed Text \t\n ";
 //     // char set_9[] = " \t\n";
 //     // char *result9 = ft_strtrim(s1_9, set_9);
-//     // printf("9: %s%s%s\n", GREEN, result9, RESET); // Expected: "Trimmed Text"
+//     // printf("9: %s%s%s\n", GREEN, result9, RESET);
+// // Expected: "Trimmed Text"
 //     // free(result9);
 
 //     // // Edge case 10: Complex trimming example
 //     // char s1_10[] = "xxxx Hello, xxx  Wxxxorld! xxx";
 //     // char set_10[] = "x ";
 //     // char *result10 = ft_strtrim(s1_10, set_10);
-//     // printf("10: %s%s%s\n", GREEN, result10, RESET); // Expected: "Hello, xxx  Wxxxorld!"
+//     // printf("10: %s%s%s\n", GREEN, result10, RESET);
+// // Expected: "Hello, xxx  Wxxxorld!"
 //     // free(result10);
 
 //     return 0;
@@ -169,4 +169,3 @@ char	*ft_strtrim(char const *s1, char const *charset)
 
 // //     return 0;
 // // }
-
