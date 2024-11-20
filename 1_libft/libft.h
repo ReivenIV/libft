@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 13:37:20 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:17:32 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 
+char	*ft_strtrim(char const *s1, char const *charset);
 int		ft_atoi(const char *str);
 void	*ft_memset(void *buffer, int simbol, size_t size);
 void	*ft_bzero(void *buffer, size_t size);
