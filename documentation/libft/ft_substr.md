@@ -42,7 +42,6 @@ char	*ft_substr(char const *src, unsigned int start, size_t len)
 }
 ```
 
-
 ---
 
 ### Function Prototype
