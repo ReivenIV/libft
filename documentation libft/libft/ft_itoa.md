@@ -122,7 +122,7 @@ int main() {
 }
 ```
 
-### Test Outputs
+### Expected Outputs
 ```text
 ft_itoa(456) = "456"
 ft_itoa(-77) = "-77"
