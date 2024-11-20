@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:30:32 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 17:22:16 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:22:28 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-char	*(char const *src, unsigned int start, size_t len)
+char	*ft_substr(char const *src, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	src_len;
