@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 12:50:19 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 13:37:20 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ void	*ft_memcpy(void *str_dest, const void *str_src, size_t n);
 char	*ft_itoa(int src_n);
 char	*ft_strndup(const char *src, size_t start, size_t end);
 char	**ft_split(const char *src, char charset);
+char	*ft_strmapi(char const *src, char (*f)(unsigned int, char));
 
 #endif

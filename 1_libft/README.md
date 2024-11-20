@@ -73,7 +73,7 @@ Use `malloc()` for:
 - [ ] [ft_strtrim](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strtrim)
 - [x] [ft_split](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_split)
 - [x] [ft_itoa](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_itoa)
-- [ ] [ft_strmapi](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strmapi)
+- [x] [ft_strmapi](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strmapi)
 - [ ] [ft_striteri](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_striteri)
 - [ ] [ft_putchar_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putchar_fd)
 - [ ] [ft_putstr_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putstr_fd)
