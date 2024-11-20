@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:30:32 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:28:50 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:22:16 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,39 +15,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen8(const char *str)
-{
-	size_t	count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
-}
-
-char	*ft_strdup3(const char *str)
-{
-	int		i;
-	int		str_len;
-	char	*dup;
-
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	str_len = ft_strlen8(str);
-	dup = (char *)malloc(str_len * sizeof(char) + 1);
-	if (dup == NULL)
-		return (NULL);
-	while (i < str_len)
-	{
-		dup[i] = str[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
-
-char	*ft_substr(char const *src, unsigned int start, size_t len)
+char	*(char const *src, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	src_len;
@@ -55,18 +23,10 @@ char	*ft_substr(char const *src, unsigned int start, size_t len)
 
 	if (src == NULL)
 		return (NULL);
-	src_len = ft_strlen8(src);
-	// Handle the case where `start` is beyond the end of `src`
-	// If `start` is greater than or equal to `src_len`,
-	// there's no valid substring
-	// to extract, so we return an empty string.
+	src_len = ft_strlen(src);
 	if (start >= src_len)
-		return (ft_strdup3(""));
-	// Adjust `len` if it exceeds the available characters in `src`
-	// If `start + len` goes beyond the end of `src`, 
-	// adjust `len` to fit within bounds.
+		return (ft_strdup(""));
 	if (start + len > src_len)
-		// handles `len`
 		len = src_len - start;
 	str = malloc((len + 1) * sizeof(char));
 	if (str == NULL)
