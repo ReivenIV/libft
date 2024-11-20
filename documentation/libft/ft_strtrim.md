@@ -1,19 +1,41 @@
-# `ft_strtrim`
 
-The function `ft_strtrim` removes all occurrences of characters in `charset` from the beginning and end of the input string `s1`. It trims the string by skipping over unwanted characters from both ends until it reaches valid content.
-exemple 
+# Understanding `ft_strtrim`
 
-```c
-//  usage exemple 
-    char s1[] = "?#Hello, World!#?";
-    char set[] = "#?";
-    char *res = ft_strtrim(s1_1, set_1); // expected output of res : "Hello, World!"
-```
+The function `ft_strtrim` is used to remove all leading and trailing characters from a given string (`s1`) that belong to a specified set of characters (`charset`). The cleaned-up string is returned as a new dynamically allocated string.
 
+---
 
-## Code Breakdown
+## Summary
 
-### Helper Function: `is_charset`
+The function `ft_strtrim` is a tool to clean up a string by removing unwanted leading and trailing characters defined in `charset`. The logic ensures correctness by carefully handling string indices and edge cases.
+
+---
+## How `ft_strtrim` Works
+
+1. **Validation of Input**:
+   - If `charset` is `NULL` or empty, the function simply duplicates the string `s1` since there are no characters to trim.
+
+2. **(cordinates) Find Start (`i`) and End (`j`)**:
+   - Start (`i`): Index of the first character in `s1` that is *not* in `charset`.
+   - End (`j`): Index of the last character in `s1` that is *not* in `charset`.
+
+3. **Memory Allocation**:
+   - The size of the trimmed string is determined as `(j - i + 2)`:
+     - `+1` for the null terminator.
+     - `+1` because `j` is inclusive.
+
+4. **Copy Relevant Characters**:
+   - Characters between `i` and `j` (inclusive) are copied into the new string.
+
+5. **Edge Cases**:
+   - If all characters in `s1` are part of `charset`, the function returns an empty string.
+
+---
+
+## Code Explanation
+
+### `is_charset`
+The helper function checks if a character `c_to_test` belongs to the `charset`.
 
 ```c
 static int	is_charset(char c_to_test, const char *charset)
@@ -30,99 +52,86 @@ static int	is_charset(char c_to_test, const char *charset)
 	return (0);
 }
 ```
-
-This function checks if a character `c_to_test` or "caracter to be tested" belongs to the set of characters defined in `charset`. It returns `1` (true) if the character is found, and `0` (false) otherwise.
+- Returns `1` if the character exists in `charset`, otherwise `0`.
 
 ---
 
-### `ft_strtrim`
+### Why `j = ft_strlen(s1) - 1;`
+
+- **`ft_strlen(s1)`** gives the total number of characters in `s1`, but indices in strings start from `0`. 
+- Subtracting `1` ensures `j` points to the last valid character in `s1`.
+- Without `-1`, `j` would point one position past the last character, causing undefined behavior.
+
+---
+
+### Why `while (i < j + 1)`
+
+- The loop runs from `i` to `j`, inclusive.
+- Without `+1`, the loop would stop before copying the last character, resulting in the last character being omitted from the trimmed string.
+
+---
+
+### Full Code with Explanation
 
 ```c
-char	*ft_strtrim(char const *s1, char const *charset)
+#include "libft.h"
+
+static int	is_charset(char c_to_test, const char *charset)
 {
 	int	i;
-	int	j;
-	int	k;
-	char	*str;
+
+	i = 0;
+	while (charset[i] != '\0')
+	{
+		if (charset[i] == c_to_test)
+			return (1); // Character is in charset = TRUE
+		i++;
+	}
+	return (0); // Character is not in charset = FALSE
+}
+
+char	*ft_strtrim(char const *s1, char const *charset)
+{
+	size_t	i; // Start index
+	size_t	j; // End index
+	size_t	k; // Index for new string
+	char	*str; // Trimmed string
 	
-	if (!charset || charset[0] == '\0')
+	if (!charset || charset[0] == '\0') // If charset is empty or falsy
 		return (ft_strdup(s1));
+	
 	i = 0;
 	k = 0;
-	j =  ft_strlen(s1) - 1;	
-	// Find coordinates for start (i) and end (j) with is_charset. 
+	j = ft_strlen(s1) - 1; // Last index of s1 ()
+	
+	// Find start index (i)
 	while (is_charset(s1[i], charset) == 1 && s1[i] != '\0')
 		i++;
+	
+	// Find end index (j)
 	while (is_charset(s1[j], charset) == 1 && s1[j] > 0)
 		j--;
+	
+	// If all characters are in charset, return empty string
 	if (i > j)
 		return (strdup(""));
-	// Amount of characters needed for malloc: j - i + 2.
-	str = malloc((j - i + 2) * sizeof(char));
+
+	// Allocate memory for trimmed string
+	str = malloc((j - i + 2) * sizeof(char)); // +2 for null terminator and inclusiveness
 	if (str == NULL)
 		return (NULL);
-	// Add data to str.
-	while (i <= j)
+	
+	// Copy characters between i and j into str
+	while (i < j + 1) // Include the character at index j
 	{
 		str[k] = s1[i];
-		k++;
 		i++;	
+		k++;
 	}
-	str[k] = '\0';		
+	str[k] = '\0'; // Null terminate the string
 	return (str);
 }
 ```
-
 ---
 
-### Explanation of Key Sections
 
-1. **`j = ft_strlen(s1) - 1;`**
-   - **Why `-1`?**
-     - `ft_strlen(s1)` returns the total number of characters in `s1`. However, strings in C are **zero-indexed**, meaning the last valid index of the string is `ft_strlen(s1) - 1`. If you don't subtract `1`, `j` will point to the null terminator (`\0`), causing the logic to fail.
-
-   - **What happens without `-1`?**
-     - Without `-1`, the loop `while (is_charset(s1[j], charset) == 1 && s1[j] > 0)` would either skip characters incorrectly or access out-of-bound memory.
-
-2. **Trimming Logic**
-   - Start at the first character (`i = 0`) and move forward while `s1[i]` is in `charset`.
-   - Start at the last character (`j`) and move backward while `s1[j]` is in `charset`.
-   - If all characters are part of `charset` (`i > j`), return an empty string.
-
-3. **Memory Allocation**
-   - The new string size is `(j - i + 2)`, where:
-     - `j - i + 1` is the number of valid characters.
-     - `+1` accounts for the null terminator (`\0`).
-
-4. **Copying Data**
-   - Using a `while` loop, the valid portion of `s1` (from `i` to `j`) is copied into the newly allocated memory.
-
----
-
-### Example Usage
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    char *s1 = "  ---Hello World---  ";
-    char *charset = " -";
-    char *trimmed = ft_strtrim(s1, charset);
-    
-    printf("Original: '%s'\n", s1);
-    printf("Trimmed: '%s'\n", trimmed);
-    
-    free(trimmed);
-    return 0;
-}
-```
-
-**Output:**
-
-```
-Original: '  ---Hello World---  '
-Trimmed: 'Hello World'
-```
-
-This demonstrates how `ft_strtrim` removes unwanted characters from both ends of the string based on `charset`.
