@@ -6,24 +6,24 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:29:09 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 12:58:44 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:07:30 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_charset(char c, char charset);
-static int	count_words(const char *src, char charset);
-static int	splitter(char **dest, const char *src, char charset);
+static int	is_caracter(char c, char caracter);
+static int	count_words(const char *src, char caracter);
+static int	splitter(char **dest, const char *src, char caracter);
 
-static int	is_charset(char c, char charset)
+static int	is_caracter(char c, char caracter)
 {
-	if (charset == c)
+	if (caracter == c)
 		return (1);
 	return (0);
 }
 
-static int	count_words(const char *src, char charset)
+static int	count_words(const char *src, char caracter)
 {
 	size_t	i;
 	size_t	count;
@@ -32,12 +32,12 @@ static int	count_words(const char *src, char charset)
 	count = 0;
 	while (src[i] != '\0')
 	{
-		while (src[i] != '\0' && is_charset(src[i], charset))
+		while (src[i] != '\0' && is_caracter(src[i], caracter))
 			i++;
 		if (src[i] != '\0')
 		{
 			count++;
-			while (src[i] != '\0' && !is_charset(src[i], charset))
+			while (src[i] != '\0' && !is_caracter(src[i], caracter))
 				i++;
 		}
 	}
@@ -124,7 +124,7 @@ char	*ft_strndup(const char *src, size_t start, size_t end)
 // //     return 0;
 // // }
 
-static int	splitter(char **dest, const char *src, char charset)
+static int	splitter(char **dest, const char *src, char caracter)
 {
 	size_t	i;
 	size_t	j;
@@ -137,12 +137,12 @@ static int	splitter(char **dest, const char *src, char charset)
 		return (0);
 	while (src[i] != '\0')
 	{
-		while (src[i] != '\0' && is_charset(src[i], charset))
+		while (src[i] != '\0' && is_caracter(src[i], caracter))
 			i++;
 		if (src[i] != '\0')
 		{
 			start = i;
-			while (src[i] != '\0' && !is_charset(src[i], charset))
+			while (src[i] != '\0' && !is_caracter(src[i], caracter))
 				i++;
 			end = i - 1;
 			dest[j] = ft_strndup(src, start, end);
@@ -158,11 +158,11 @@ static int	splitter(char **dest, const char *src, char charset)
 // // #include <string.h>
 // // int main() {
 // //     char *str = "Hello, World! Welcome to C programming.";
-// //     char *charset = " ,!.";
+// //     char *caracter = " ,!.";
 // //     char *dest[10]; // Preallocate space for substrings
 
 // //     // // 1 Output the results
-// //     int count = splitter(dest, str, charset);
+// //     int count = splitter(dest, str, caracter);
 // //     printf("Number of substrings: %d\n", count);
 // //     for (int i = 0; i < count; i++) {
 // //         printf("Substring %d: %s\n", i + 1, dest[i]);
@@ -174,12 +174,12 @@ static int	splitter(char **dest, const char *src, char charset)
 
 // //     // Empty string
 // //     char *empty_str = "";
-// //     count = splitter(dest, empty_str, charset);
+// //     count = splitter(dest, empty_str, caracter);
 // //     printf("Empty string test, substrings: %d\n", count);
 
 // //     // String without delimiters
 // //     char *no_delim_str = "NoDelimitersHere";
-// //     count = splitter(dest, no_delim_str, charset);
+// //     count = splitter(dest, no_delim_str, caracter);
 // //     printf("No delimiters test, substrings: %d\n", count);
 // //     for (int i = 0; i < count; i++) {
 // //         printf("Substring %d: %s\n", i + 1, dest[i]);
@@ -188,20 +188,20 @@ static int	splitter(char **dest, const char *src, char charset)
 
 // //     // Only delimiters
 // //     char *only_delim_str = " ,!.";
-// //     count = splitter(dest, only_delim_str, charset);
+// //     count = splitter(dest, only_delim_str, caracter);
 // //     printf("Only delimiters test, substrings: %d\n", count);
 
 // //     return 0;
 // // }
 
-char	**ft_split(const char *src, char charset)
+char	**ft_split(const char *src, char caracter)
 {
 	char	**dest;
 	int		src_count_words;
 
 	if (src == NULL)
 		return (NULL);
-	src_count_words = count_words((char *)src, charset);
+	src_count_words = count_words((char *)src, caracter);
 	dest = malloc((src_count_words + 1) * sizeof(char *));
 	if (dest == NULL)
 		return (NULL);
@@ -210,7 +210,7 @@ char	**ft_split(const char *src, char charset)
 		dest[0] = NULL;
 		return (dest);
 	}
-	splitter(dest, src, charset);
+	splitter(dest, src, caracter);
 	return (dest);
 }
 
