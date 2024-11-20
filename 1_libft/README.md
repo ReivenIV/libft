@@ -222,17 +222,6 @@ Here’s the markdown version of the additional functions described in the PDFs:
 # Bonus Part
 
 If you completed the mandatory part, attempt the bonus part for additional points.
-
-Use the following structure to represent a node in your list:
-
-```c
-typedef struct s_list
-{
-    void *content;
-    struct s_list *next;
-} t_list;
-```
-
 Implement the following list manipulation functions:
 
 - [ ] **ft_lstnew**
@@ -245,3 +234,12 @@ Implement the following list manipulation functions:
 - [ ] **ft_lstiter**
 - [ ] **ft_lstmap**
 
+Use the following structure to represent a node in your list:
+
+```c
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
+```
