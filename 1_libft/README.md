@@ -74,7 +74,7 @@ Use `malloc()` for:
 - [x] [ft_split](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_split)
 - [x] [ft_itoa](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_itoa)
 - [x] [ft_strmapi](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strmapi)
-- [ ] [ft_striteri](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_striteri)
+- [x] [ft_striteri](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_striteri)
 - [ ] [ft_putchar_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putchar_fd)
 - [ ] [ft_putstr_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putstr_fd)
 - [ ] [ft_putendl_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putendl_fd)
@@ -84,6 +84,11 @@ Use `malloc()` for:
 In this second part, you must develop a set of functions that are either not in the libc or are part of it but in a different form. Some of the following functions can be useful for writing the functions of Part 1.
 
 ---
+
+<details>
+<!--! pliable content -->
+
+<summary>Function Breakdown</summary>
 
 # ft_substr
 
@@ -99,10 +104,7 @@ In this second part, you must develop a set of functions that are either not in 
 
 The function `ft_substr` is a classic C programming exercise that teaches how to dynamically create a substring from a given string. Here’s how it works and what you can expect from it with some examples.
 
-
-
-
--------
+---
 
 # ft_strjoin
 
@@ -211,6 +213,9 @@ Here’s the markdown version of the additional functions described in the PDFs:
 - **Return value**: None
 - **External functions**: `write`
 - **Description**: Outputs the integer `n` to the given file descriptor.
+
+<!--! end pliable content -->
+</details>
 
 ---
 
