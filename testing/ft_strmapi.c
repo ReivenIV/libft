@@ -10,3 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include <stdlib.h>
+
+static size_t	ft_strlen(char *str)
+{
+	size_t  count;
+
+	count = 0;
+	while (str[count] != '\0')
+		count++;
+	return (count);
+}
+char	*ft_strmapi(char const *src, char (*f)(unsigned int, char))
+{
+	if (src == NULL || !f)
+		return (NULL);
+	
+}
