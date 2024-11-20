@@ -6,12 +6,13 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:23:17 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/19 12:23:17 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 12:56:33 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int  count_n(long n);
+
+static int	count_n(long n);
 static char	*create_str(long src_n, long n_len);
 
 char	*ft_itoa(int src_n)
@@ -47,7 +48,7 @@ char	*ft_itoa(int src_n)
 // // #include <stdio.h>
 // // int main()
 // // {
-// //     int test_cases[] = {456, -77, 800, 8989, 7410, 0, -2147483648, 2147483647};
+// // int test_cases[] = {456, -77, 800, 8989, 7410, 0};
 // //     size_t num_cases = sizeof(test_cases) / sizeof(test_cases[0]);
 
 // //     for (size_t i = 0; i < num_cases; i++)
@@ -101,7 +102,7 @@ static char	*create_str(long src_n, long n_len)
 // We count how many numbers we have in n (necesary for malloc)
 static int	count_n(long n)
 {
-	long count;
+	long	count;
 
 	count = 0;
 	if (n == 0)

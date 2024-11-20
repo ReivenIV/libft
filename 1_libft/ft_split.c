@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:29:09 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/18 15:29:09 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/20 12:58:44 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	is_charset(char c, char charset);
 static int	count_words(const char *src, char charset);
 static int	splitter(char **dest, const char *src, char charset);
 
-static int is_charset(char c, char charset)
+static int	is_charset(char c, char charset)
 {
 	if (charset == c)
 		return (1);
@@ -30,7 +30,6 @@ static int	count_words(const char *src, char charset)
 
 	i = 0;
 	count = 0;
-	
 	while (src[i] != '\0')
 	{
 		while (src[i] != '\0' && is_charset(src[i], charset))
@@ -48,14 +47,14 @@ static int	count_words(const char *src, char charset)
 char	*ft_strndup(const char *src, size_t start, size_t end)
 {
 	size_t		i;
-	char	*dest;
+	char		*dest;
 
-	if (src == NULL || start > end )
+	if (src == NULL || start > end)
 		return (NULL);
 	dest = malloc((end - start + 2) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-	i = 0;	
+	i = 0;
 	while (i < (end - start + 1))
 	{
 		dest[i] = src[i + start];
@@ -113,7 +112,8 @@ char	*ft_strndup(const char *src, size_t start, size_t end)
 // //     }
 
 // //     // Test 5: Entire string
-// //     substring = ft_strndup(source, 0, (int)strlen(source) - 1); // Expected: "Hello, World!"
+// //     substring = ft_strndup(source, 0, (int)strlen(source) - 1);
+// //			 Expected: "Hello, World!"
 // //     if (substring) {
 // //         printf("Test 5: %s\n", substring);
 // //         free(substring);
@@ -161,7 +161,6 @@ static int	splitter(char **dest, const char *src, char charset)
 // //     char *charset = " ,!.";
 // //     char *dest[10]; // Preallocate space for substrings
 
-
 // //     // // 1 Output the results
 // //     int count = splitter(dest, str, charset);
 // //     printf("Number of substrings: %d\n", count);
@@ -195,7 +194,8 @@ static int	splitter(char **dest, const char *src, char charset)
 // //     return 0;
 // // }
 
-char	**ft_split(const char *src, char charset) {
+char	**ft_split(const char *src, char charset)
+{
 	char	**dest;
 	int		src_count_words;
 
