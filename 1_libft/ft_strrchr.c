@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:19:16 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 14:54:42 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:33:07 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen7(const char *str)
-{
-	size_t	count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
-}
 /*
 * > while (i >= 0) or (i > 0) would cause an infinite loop,
 *   since size_t is unsigned and cannot be negative.
@@ -41,7 +32,7 @@ char	*ft_strrchr(const char *src, int target)
 	char	*str;
 
 	str = (char *)src;
-	i = ft_strlen7(str);
+	i = ft_strlen(str);
 	if (target == '\0')
 		return (&str[i]);
 	while (i-- > 0)
