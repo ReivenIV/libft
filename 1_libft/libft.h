@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 11:32:47 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:06:20 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ void	*ft_calloc(size_t amount, size_t type_size);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *src, int fd);
 void	ft_putendl_fd(char *src, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
