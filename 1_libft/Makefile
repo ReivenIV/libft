@@ -6,7 +6,7 @@
 #    By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/15 13:32:17 by fwebe-ir          #+#    #+#              #
-#    Updated: 2024/11/21 09:58:52 by fwebe-ir         ###   ########.fr        #
+#    Updated: 2024/11/21 10:46:16 by fwebe-ir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,22 +30,22 @@ FLAGS		= -Wall -Werror -Wextra
 
 		
 OBJS		= ${SRCS:.c=.o}
-OBJ_BONUS	= ${SRC_BONUS:.c=.o}
+# OBJ_BONUS	= ${SRC_BONUS:.c=.o}
 
 all:		${NAME}
 
 ${NAME} :	${OBJS}
 			ar rcs ${NAME} ${OBJS}
 
-bonus:		${OBJS} ${OBJ_BONUS}
-			ar rcs ${NAME} ${OBJS} ${OBJ_BONUS}
+# bonus:		${OBJS} ${OBJ_BONUS}
+# 			ar rcs ${NAME} ${OBJS} ${OBJ_BONUS}
 			
 %.o: %.c	
 			${CC} ${FLAGS} -c $< -o $@
 			
 
 clean:	
-			${RM} ${OBJS} ${OBJ_BONUS}
+			${RM} ${OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
