@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 12:06:20 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:27:58 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 size_t	ft_strlen(const char *str);
 char	*ft_substr(char const *src, unsigned int start, size_t len);
-char	ft_tolower(char str);
-char	ft_toupper(char str);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 void	*ft_memcpy(void *str_dest, const void *str_src, size_t n);
 char	*ft_strrchr(const char *src, int target);
 
