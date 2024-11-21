@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 15:27:58 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 18:25:05 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-void	*ft_memchr(const void *src, int c, size_t amount);
+void	*ft_memchr(const void *src, int target, size_t amount);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 void	*ft_memmove(void *str_dest, const void *str_src, size_t size);
 char	*ft_strchr(const char *src, int target);
