@@ -114,3 +114,52 @@ close(fd);
 
 ---
 
+# Questions
+
+### fd will always write in one single line  ?
+
+No, fd does not inherently limit writing to a single line. The behavior depends on what data you send to the file descriptor and how the destination interprets it. Let me clarify:
+Writing Behavior
+
+    File Descriptor Just Writes Bytes:
+        The file descriptor (fd) writes the exact bytes you tell it to write, in the order you send them. It doesn't know about "lines" or "newlines."
+        For example:
+            If you write "Hello" to fd, it writes Hello.
+            If you then write "\n", it adds a newline after Hello.
+
+    Line Breaks Depend on You:
+        To move to a new line, you need to explicitly write a newline character ('\n').
+        Without a newline character, data will keep appending on the same "line" (for terminals, files, etc.), as there’s no indication to move to the next line.
+
+    Output Depends on the Destination:
+        If fd points to a file, the file will just store the data sequentially, including newlines ('\n') you provide.
+        If fd points to the terminal, the terminal will interpret '\n' as a command to move to the next line.
+
+Example:
+
+Here’s what happens when you write to a file descriptor:
+
+```c
+write(fd, "Hello", 5);     // Writes "Hello"
+write(fd, "\n", 1);        // Writes a newline
+write(fd, "World", 5);     // Writes "World"
+```
+    In a file, this will result in:
+
+_Hello_
+_World_
+
+If you omit the newline:
+```c
+write(fd, "Hello", 5);  // Writes "Hello"
+write(fd, "World", 5);  // Writes "World"
+```
+You get:
+
+_HelloWorld_
+
+### Conclusion:
+
+    By default, fd writes sequentially.
+    If you want separate lines, you must explicitly include a newline ('\n').
+    The concept of "lines" only exists because programs like terminal emulators or text editors interpret '\n' as a line break. Without '\n', everything stays on one line.
