@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:03:25 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:49:46 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 18:43:14 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,21 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *str_dest, const void *str_src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	size_t				i;
-	unsigned char		*dest;
-	unsigned const char	*src;
+	size_t	i;
 
-	if (str_src == NULL && str_dest == NULL)
+	if (!src && !dest)
 		return (NULL);
 	i = 0;
-	dest = (unsigned char *)str_dest;
-	src = (unsigned const char *)str_src;
 	if (dest > src)
 		while (size-- > 0)
-			dest[size] = src[size];
+			((unsigned char *)dest)[size] = ((unsigned const char *)src)[size];
 	else
 	{
 		while (i < size)
 		{
-			dest[i] = src[i];
+			((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
 			i++;
 		}
 	}

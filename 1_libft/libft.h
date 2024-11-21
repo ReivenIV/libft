@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 18:25:05 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 18:40:34 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 void	*ft_memchr(const void *src, int target, size_t amount);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
-void	*ft_memmove(void *str_dest, const void *str_src, size_t size);
+void	*ft_memmove(void *dest, const void *src, size_t size);
 char	*ft_strchr(const char *src, int target);
 char	*ft_strdup(const char *str);
-char	*ft_strjoin(char const *src1, char const *src2);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -43,6 +42,7 @@ void	*ft_memcpy(void *str_dest, const void *str_src, size_t n);
 char	*ft_strrchr(const char *src, int target);
 
 // with malloc
+char	*ft_strjoin(char const *src1, char const *src2);
 char	*ft_itoa(int src_n);
 char	*ft_strndup(const char *src, size_t start, size_t end);
 char	**ft_split(const char *src, char charset);
