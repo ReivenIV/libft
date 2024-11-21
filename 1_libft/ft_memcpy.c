@@ -6,12 +6,12 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:33:22 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 17:18:27 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 18:15:12 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * `memcpy` : is used to copy a specified number of bytes 
+ * `memcpy` : will copy a specified number of bytes 
  * from one memory location to another. 
  * memcpy is commonly used when you need to copy blocks of raw data, 
  * like arrays, structs, or memory buffers, without altering 
@@ -23,20 +23,16 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *str_dest, const void *str_src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t				i;
-	unsigned char		*dest;
-	unsigned const char	*src;
+	size_t	i;
 
-	if (str_dest == NULL || str_dest == NULL)
-		return (NULL);
+	if (!dest && !src && n > 0)
+		return (0);
 	i = 0;
-	dest = (unsigned char *)str_dest;
-	src = (unsigned const char *)str_src;
 	while (i < n)
 	{
-		dest[i] = src[i];
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
 	return (dest);
