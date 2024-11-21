@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:07:53 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 11:36:00 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 13:46:29 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ char	*ft_strdup(const char *str)
 	int		str_len;
 	char	*dup;
 
-	if (str == NULL)
-		return (NULL);
 	i = 0;
 	str_len = ft_strlen(str);
 	dup = (char *)malloc(str_len * sizeof(char) + 1);
