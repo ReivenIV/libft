@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:19:30 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:55:49 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:13:18 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 //* These functions convert lowercase letters to uppercase.
 
-char	ft_toupper(char str)
+char	ft_toupper(char character)
 {
-	if (str >= 'a' && str <= 'z')
+	if ((unsigned char)character >= 'a' && (unsigned char)character <= 'z')
 	{
-		return (str - 32);
+		return (character - 32);
 	}
-	return (str);
+	return (character);
 }
 
 // #include <stdio.h>
