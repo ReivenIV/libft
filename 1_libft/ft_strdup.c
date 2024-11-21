@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:07:53 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:06:08 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:36:00 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 */
 
 #include "libft.h"
-
-int	ft_strlen2(const char *str)
-{
-	int	count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
-}
 
 char	*ft_strdup(const char *str)
 {
@@ -35,7 +25,7 @@ char	*ft_strdup(const char *str)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	str_len = ft_strlen2(str);
+	str_len = ft_strlen(str);
 	dup = (char *)malloc(str_len * sizeof(char) + 1);
 	if (dup == NULL)
 		return (NULL);
