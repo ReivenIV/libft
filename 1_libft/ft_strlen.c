@@ -6,11 +6,11 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 09:45:20 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:02:11 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:43:45 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

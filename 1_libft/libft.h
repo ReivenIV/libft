@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 09:58:40 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:44:07 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char	*ft_strdup(const char *str);
 char	*ft_strjoin(char const *src1, char const *src2);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 size_t	ft_strlen(const char *str);
@@ -54,6 +53,5 @@ void	*ft_calloc(size_t amount, size_t type_size);
 // fd
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *src, int fd);
-
 
 #endif
