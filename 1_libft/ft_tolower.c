@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:55:20 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:12:40 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,37 @@
 
 //*	These functions convert uppercase letters to lowercase.
 
-char	ft_tolower(char str)
+char	ft_tolower(char character)
 {
-	if (str >= 'A' && str <= 'Z')
+	if ((unsigned char)character >= 'A' && (unsigned char)character <= 'Z')
 	{
-		return (str + 32);
+		return (character + 32);
 	}
-	return (str);
+	return (character);
 }
 
 // #include <stdio.h>
 // #include <ctype.h>
-// #include <string.h>
 
 // int main(void) {
 // char test_strings[][50] = {
-//		"HELLO, WORLD!",                      
-//		"C NETWORK PROGRAMMING",              
-//		"MIXED Case EXAMPLE 123!",            
-//		"CONVERT THIS TO LOWER",              
-//		"RANDOM_TEXT_HERE!",                  
-//		"SIMPLE LOWER TEST",                  
-//		"ALL CAPS LINE",                    
-//		"MIXEDlowerANDUPPER",                 
-//		"RandomIZED cAsE FoR TESTING",        
-//		"TESTINGSTRING123",                   
-//		"COMPLEX789CASE789HERE"               
+// 		"HELLO, WORLD!",                      
+// 		"C NETWORK PROGRAMMING",              
+// 		"MIXED Case EXAMPLE 123!",            
+// 		"CONVERT THIS TO LOWER",              
+// 		"RANDOM_TEXT_HERE!",                  
+// 		"SIMPLE LOWER TEST",                  
+// 		"ALL CAPS LINE",                    
+// 		"MIXEDlowerANDUPPER",                 
+// 		"RandomIZED cAsE FoR TESTING",        
+// 		"TESTINGSTRING123",                   
+// 		"COMPLEX789CASE789HERE",
+// 		"\200"              
 // };
 
 //     // Iterate through the array and test each string
-//		int num_tests = sizeof(test_strings) / sizeof(test_strings[0]);
-//		for (int i = 0; i < num_tests; i++) {
+// 		int num_tests = sizeof(test_strings) / sizeof(test_strings[0]);
+// 		for (int i = 0; i < num_tests; i++) {
 //         // Print original string
 //         printf("Original:    %s\n", test_strings[i]);
 
