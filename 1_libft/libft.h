@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 11:20:54 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:32:47 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_substr(char const *src, unsigned int start, size_t len);
 char	ft_tolower(char str);
 char	ft_toupper(char str);
 void	*ft_memcpy(void *str_dest, const void *str_src, size_t n);
+char	*ft_strrchr(const char *src, int target);
 
 // with malloc
 char	*ft_itoa(int src_n);
