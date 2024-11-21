@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:49:39 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:28:50 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 18:58:46 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,11 @@
 void	*ft_calloc(size_t amount, size_t type_size)
 {
 	void	*tmp;
-	size_t	i;
 
-	i = 0;
-	if (amount > (-1 / type_size) && type_size != 0)
-		return (NULL);
-	tmp = (void *)malloc(amount * type_size);
+	tmp = malloc(amount * type_size);
 	if (tmp == NULL)
 		return (0);
-	while (i < amount)
-	{
-		((int *)tmp)[i] = 0;
-		i++;
-	}
+	memset(tmp, 0, (amount * type_size));
 	return (tmp);
 }
 // #include <stdio.h>
@@ -38,12 +30,13 @@ void	*ft_calloc(size_t amount, size_t type_size)
 
 //     // Edge case 1: Allocate memory for 0 elements
 // 	//* expected output = 1P:Failed 
-//     int *arr1 = (int *)ft_calloc(0, sizeof(int));
+//     double arr1 = ft_calloc(10, sizeof(double));
 //     if (arr1 == NULL) {
-//         printf("1P:%sPassed%s\n", GREEN, RESET);
+//         printf("1P:%s %d %s\n", GREEN, arr1, RESET);
 //     } else {
 //         printf("1F:%sFailed%s\n", RED, RESET);
 //     }
+// 	free(arr1);
 
 // // Edge case 2: Allocate a large amount of memory 
 // // (possible failure if memory is insufficient)
