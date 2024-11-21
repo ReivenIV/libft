@@ -6,45 +6,13 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:51:36 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 14:30:47 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:24:45 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // * Will join 2 strings.
 
 #include "libft.h"
-
-size_t	ft_strlen3(char const *str)
-{
-	size_t	count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
-}
-
-char	*ft_strdup2(const char *str)
-{
-	int		i;
-	int		str_len;
-	char	*dup;
-
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	str_len = ft_strlen3(str);
-	dup = malloc(str_len * sizeof(char) + 1);
-	if (dup == NULL)
-		return (NULL);
-	while (i < str_len)
-	{
-		dup[i] = str[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
 
 char	*ft_strjoin(char const *src1, char const *src2)
 {
@@ -56,7 +24,7 @@ char	*ft_strjoin(char const *src1, char const *src2)
 		src1 = "";
 	if (!src2)
 		src2 = "";
-	str = malloc((ft_strlen3(src1) + ft_strlen3(src2) + 1) * sizeof(char));
+	str = malloc((ft_strlen(src1) + ft_strlen(src2) + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
