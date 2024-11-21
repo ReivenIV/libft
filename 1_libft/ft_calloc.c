@@ -6,9 +6,12 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:49:39 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 18:58:46 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 19:06:04 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// REMINDER : ints = calloc(5, 4(ints)) => will do => ints = 00000
+// REMINDER : memset(ints(buffer), 0(the filler, 20(size)) => ints = 00000
 
 #include "libft.h"
 

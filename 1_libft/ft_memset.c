@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:49:37 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:44:50 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 19:06:16 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 * `ft_memset` is used to set a block of memory to a 
 * specific value, byte by byte.
 */
+// REMINDER : memset(ints(buffer), 0(the filler, 20(size)) => ints = 00000
 
 #include "libft.h"
 
