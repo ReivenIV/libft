@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:28:15 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 16:55:15 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/21 19:40:48 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,19 @@ char	*ft_strnstr(const char *s1, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	i = 0;
-	if (needle[i] == '\0')
+	if (needle[0] == '\0')
 		return ((char *)&s1[0]);
-	while (i < len)
+	i = 0;
+	while (i < len && s1[i] != '\0')
 	{
 		j = 0;
-		while (needle[j] != '\0' && s1[i + j] == needle[j] && (i + j) < len)
+		while (needle[j] != '\0' && s1[i + j] != '\0'
+			&& s1[i + j] == needle[j] && (i + j) < len)
+		{
 			j++;
-		if (needle[j] == '\0')
-			return ((char *)&s1[i]);
+			if (needle[j] == '\0')
+				return ((char *)&s1[i]);
+		}
 		i++;
 	}
 	return (0);
@@ -50,20 +53,20 @@ char	*ft_strnstr(const char *s1, const char *needle, size_t len)
 //     char needle2[] = "od";
 //     char *result2 = ft_strnstr(haystack2, needle2, sizeof(haystack2));
 //     printf("2: %s%s%s\n", GREEN, result2 ? result2 : "Not found", RESET);
-// 	// output: "good morning"
+// 	// output: "od morning"
 
 //     // Edge case 3: Needle middle
 //     char haystack3[] = "Proin dictum est non purus malesuada eleifend. ";
 //     char needle3[] = "est";
-//     char *result3 = ft_strnstr(haystack3, needle3, sizeof(haystack3));
+//     char *result3 = ft_strnstr(haystack3, needle3, strlen(haystack3));
 //     printf("3: %s%s%s\n", GREEN, result3 ? result3 : "Not found", RESET);
 // 	// output: "est non purus malesuada eleifend."
 
 //     // Edge case 4: Partial match but incomplete substring
 //     char haystack4[] = "look for the substring";
-//     char needle4[] = "subs";
+//     char needle4[] = "sub";
 // 	// Limit length to 10
-//     char *result4 = ft_strnstr(haystack4, needle4, 10); 
+//     char *result4 = ft_strnstr(haystack4, needle4, 10);
 //     printf("4: %s%s%s\n", GREEN, result4 ? result4 : "Not found", RESET);
 // 	// output: "Not found"
 
