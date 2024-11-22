@@ -1,5 +1,7 @@
 # Understanding Linked Lists in C
 
+![linked lists img](/documentation/imgs/linked_lists.png )
+
 A **linked list** is a fundamental data structure in C that consists of a sequence of elements, each containing data and a reference (or pointer) to the next element in the sequence. Unlike arrays, linked lists do not require contiguous memory locations, allowing for efficient insertions and deletions.
 
 ## Why Use Linked Lists?
