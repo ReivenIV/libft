@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:14:25 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 17:17:07 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/22 13:13:44 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,16 @@
 char	*ft_strchr(const char *src, int target)
 {
 	size_t	i;
-	char	*str;
 
 	i = 0;
-	str = (char *)src;
-	while (str[i] != '\0')
+	while (src[i] != '\0')
 	{
-		if ((unsigned char)str[i] == (unsigned char)target)
-			return (&str[i]);
+		if (src[i] == (unsigned char)target)
+			return ((char *)&src[i]);
 		i++;
 	}
-	if (target == '\0')
-		return (&str[i]);
+	if (src[i] == (unsigned char)target)
+		return ((char *)&src[i]);
 	return (NULL);
 }
 // #include <stdio.h>
@@ -45,40 +43,34 @@ char	*ft_strchr(const char *src, int target)
 //     const char *RESET = "\033[0m";
 
 //     // Edge case 1: char is at the beginning
-//     char str1[] = "hello";
-//     char ch1 = 'h';
-//     char *result1 = ft_strchr(str1, ch1);
-//     printf("output: %s%s%s\n", GREEN, result1 ? result1 : "NULL", RESET);
+//     char *result1 = ft_strchr("hello", 'h');
+//     printf("1 output: %s%s%s\n", GREEN, result1 ? result1 : "NULL", RESET);
+// 	// expected output :: "hello"
 
 //     // Edge case 2: char is at the end
-//     char str2[] = "hello";
-//     char ch2 = 'o';
-//     char *result2 = ft_strchr(str2, ch2);
-//  	printf("output: %s%s%s\n", GREEN, result2 ? result2 : "NULL", RESET);
+//     char *result2 = ft_strchr("hello", 'o');
+//  	printf("2 output: %s%s%s\n", GREEN, result2 ? result2 : "NULL", RESET);
+// 	// expected output :: "hello"
 
 //     // Edge case 3: char does not exist in the string
-//     char str3[] = "hello";
-//     char ch3 = 'x';
-//     char *result3 = ft_strchr(str3, ch3);
-//  	printf("output: %s%s%s\n", GREEN, result3 ? result3 : "NULL", RESET);
+//     char *result3 = ft_strchr("hello", 'x');
+//  	printf("3 output: %s%s%s\n", GREEN, result3 ? result3 : "NULL", RESET);
+// 	// expected output :: NULL
 
 //     // Edge case 4: Empty string
-//     char str4[] = "";
-//     char ch4 = 'a';
-//     char *result4 = ft_strchr(str4, ch4);
-//  	printf("output: %s%s%s\n", GREEN, result4 ? result4 : "NULL", RESET);
+//     char *result4 = ft_strchr("", 'a');
+//  	printf("4 output: %s%s%s\n", GREEN, result4 ? result4 : "NULL", RESET);
+// 	// expected output :: NULL
 
 //     // Edge case 5: Null char search
-// 	char str5[] = "hello";
-// 	char ch5 = '\0';
-// 	char *result5 = ft_strchr(str5, ch5);
-// 	printf("output: %s%s%s\n", GREEN, result5 ? result5 : "NULL", RESET);
+// 	char *result5 = ft_strchr("hello", '\0');
+// 	printf("5 output: %s%s%s\n", GREEN, result5 ? result5 : "NULL", RESET);
+// 	// expected output :: NULL
 
 //     // Edge case 6: Null char search
-// 	char str6[] = "hello";
-// 	char ch6 = 350;
-// 	char *result6 = ft_strchr(str6, ch6);
-// 	printf("output: %s%s%s\n", GREEN, result6 ? result6 : "NULL", RESET);
+// 	char *result6 = ft_strchr("hello", '\200');
+// 	printf("6 output: %s%s%s\n", GREEN, result6 ? result6 : "NULL", RESET);
+// 	// expected output :: NULL
 
 // 	return (0);
 // }
