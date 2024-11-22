@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:21:27 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/20 17:16:32 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/22 11:31:50 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,30 @@ static int	is_charset(char c_to_test, const char *charset)
 	return (0);
 }
 
+//* main to test is_charset;
+// // int is_charset(char *charset, char c_to_test);
+
+// // int main() {
+// //     // Test cases
+// //     char set1[] = "aeiou";
+// //     char set2[] = "12345";
+// //     char set3[] = "!@#$%";
+
+// //     char tc1 = 'a'; // Should return 1
+// //     char tc2 = 'z'; // Should return 0
+// //     char tc3 = '3'; // Should return 1
+// //     char tc4 = '!'; // Should return 1
+// //     char tc5 = 'b'; // Should return 0
+
+// //     printf("Testing 'a' in \"%s\": %d\n", set1, is_charset(set1, tc1));
+// //     printf("Testing 'z' in \"%s\": %d\n", set1, is_charset(set1, tc2));
+// //     printf("Testing '3' in \"%s\": %d\n", set2, is_charset(set2, tc3));
+// //     printf("Testing '!' in \"%s\": %d\n", set3, is_charset(set3, tc4));
+// //     printf("Testing 'b' in \"%s\": %d\n", set1, is_charset(set1, tc5));
+
+// //     return 0;
+// // }
+
 char	*ft_strtrim(char const *s1, char const *charset)
 {
 	size_t	i;
@@ -41,12 +65,14 @@ char	*ft_strtrim(char const *s1, char const *charset)
 	i = 0;
 	k = 0;
 	j = ft_strlen(s1) - 1;
+	if (j <= 0)
+		return (ft_strdup(""));
 	while (is_charset(s1[i], charset) == 1 && s1[i] != '\0')
 		i++;
-	while (is_charset(s1[j], charset) == 1 && s1[j] > 0)
+	while (is_charset(s1[j], charset) == 1 && j > 0)
 		j--;
 	if (i > j)
-		return (strdup(""));
+		return (ft_strdup(""));
 	str = malloc((j - i + 2) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
@@ -63,20 +89,27 @@ char	*ft_strtrim(char const *s1, char const *charset)
 //     const char *GREEN = "\033[1;32m";
 //     const char *RESET = "\033[0m";
 
-//     // Edge case 1: Regular trimming
-//     char s1_1[] = "?#Hello, World!#?";
-//     char set_1[] = "#?";
-//     char *result1 = ft_strtrim(s1_1, set_1);
-//     printf("1: %s%s%s\n", GREEN, result1, RESET);
-//     Expected: "Hello, World!"
-//     free(result1);
+//     // Edge case 0: Regular trimming
+//     char s0[] = "teste";
+//     char *result0 = ft_strtrim(s0, '\0');
+//     printf("1: %s%s%s\n", GREEN, result0, RESET);
+//     // Expected output : "Hello, World!"
+//     free(result0);
+
+//     // // Edge case 1: Regular trimming
+//     // char s1_1[] = "?#Hello, World!#?";
+//     // char set_1[] = "#?";
+//     // char *result1 = ft_strtrim(s1_1, set_1);
+//     // printf("1: %s%s%s\n", GREEN, result1, RESET);
+//     // // Expected output : "Hello, World!"
+//     // free(result1);
 
 //     // // Edge case 2: Trimming special characters
 //     // char s1_2[] = "!!!!Welcome to C!!!!";
 //     // char set_2[] = "!";
 //     // char *result2 = ft_strtrim(s1_2, set_2);
 //     // printf("2: %s%s%s\n", GREEN, result2, RESET); 
-//// Expected: "Welcome to C"
+// 	// // Expected output : "Welcome to C"
 //     // free(result2);
 
 //     // // Edge case 3: Trimming multiple characters
@@ -92,7 +125,7 @@ char	*ft_strtrim(char const *s1, char const *charset)
 //     // char set_4[] = "xyz";
 //     // char *result4 = ft_strtrim(s1_4, set_4);
 //     // printf("4: %s%s%s\n", GREEN, result4, RESET);
-//// Expected: "NoTrimHere"
+// // Expected: "NoTrimHere"
 //     // free(result4);
 
 //     // // Edge case 5: Empty string
@@ -145,27 +178,3 @@ char	*ft_strtrim(char const *s1, char const *charset)
 
 //     return 0;
 // }
-
-//* main to test is_charset;
-// // int is_charset(char *charset, char c_to_test);
-
-// // int main() {
-// //     // Test cases
-// //     char set1[] = "aeiou";
-// //     char set2[] = "12345";
-// //     char set3[] = "!@#$%";
-
-// //     char tc1 = 'a'; // Should return 1
-// //     char tc2 = 'z'; // Should return 0
-// //     char tc3 = '3'; // Should return 1
-// //     char tc4 = '!'; // Should return 1
-// //     char tc5 = 'b'; // Should return 0
-
-// //     printf("Testing 'a' in \"%s\": %d\n", set1, is_charset(set1, tc1));
-// //     printf("Testing 'z' in \"%s\": %d\n", set1, is_charset(set1, tc2));
-// //     printf("Testing '3' in \"%s\": %d\n", set2, is_charset(set2, tc3));
-// //     printf("Testing '!' in \"%s\": %d\n", set3, is_charset(set3, tc4));
-// //     printf("Testing 'b' in \"%s\": %d\n", set1, is_charset(set1, tc5));
-
-// //     return 0;
-// // }
