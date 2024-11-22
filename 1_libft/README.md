@@ -88,7 +88,7 @@ In this second part, you must develop a set of functions that are either not in 
 <details>
 <!--! pliable content -->
 
-<summary>Function Breakdown</summary>
+<summary>Functions Breakdown</summary>
 
 # ft_substr
 

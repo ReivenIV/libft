@@ -22,7 +22,13 @@ Here:
 - `data` holds the value of the node.
 - `next` is a pointer to the next node in the list.
 
+<details>
+<!--! pliable content -->
+<summary> Exemple Creating and Traversing a Linked List</summary>
+
 ## Creating and Traversing a Linked List
+
+
 
 Below is an example of how to create a simple linked list and traverse it:
 
@@ -87,6 +93,10 @@ In this example:
 - The `printList` function traverses the list from the head node, printing each node's data.
 - In the `main` function, we create a simple linked list with three nodes and print it.
 
+<!--! end pliable content -->
+</details>
+
+
 ## Key Operations on Linked Lists
 
 1. **Insertion**: Adding a new node to the list.
@@ -112,6 +122,11 @@ In this example:
 - Extra memory overhead for storing pointers.
 - Potentially less cache-friendly due to non-contiguous memory allocation.
 
+
+<details>
+<!--! pliable content -->
+<summary>Further Reading</summary>
+
 ## Further Reading
 
 For more in-depth information on linked lists in C, consider the following resources:
@@ -121,12 +136,19 @@ For more in-depth information on linked lists in C, consider the following resou
 - [The C Programming Handbook for Beginners - freeCodeCamp.org](https://www.freecodecamp.org/news/the-c-programming-handbook-for-beginners/)
 - [Exploring the C Programming Language: From Basics to Advanced Concepts - Code with C](https://www.codewithc.com/exploring-the-c-programming-language-from-basics-to-advanced-concepts/)
 
+<!--! end pliable content -->
+</details>
 
 ---
 
 # Questions 
 
-# 1. For what are necesary linked lists in language C 
+# 1. For what are necesary linked lists in language C ? 
+
+<details>
+<!--! pliable content -->
+<summary>one answer please</summary>
+
 
 Linked lists are a fundamental data structure in C, offering several advantages over arrays:
 
@@ -142,10 +164,15 @@ Linked lists are a fundamental data structure in C, offering several advantages 
 
 In summary, linked lists are essential in C for scenarios requiring dynamic memory management, efficient insertions and deletions, and the implementation of various data structures. 
 
-
+<!--! end pliable content -->
+</details>
 ---
 
-# 2. what is the link and diference between linked lists and data structures ? 
+## 2. what is the link and diference between linked lists and data structures ? 
+
+<details>
+<!--! pliable content -->
+<summary>one answer please</summary>
 
 A **data structure** is a way to organize and store data in a computer so it can be accessed and modified efficiently. Examples include arrays, stacks, queues, trees, and graphs.
 
@@ -176,3 +203,6 @@ In contrast, an array storing the same sequence would look like:
 In this array, elements are stored in contiguous memory locations, and accessing any element by its index is straightforward.
 
 In summary, while a linked list is a type of data structure, the term "data structure" encompasses a wide variety of organizational methods, each with its own use cases and characteristics. 
+
+<!--! end pliable content -->
+</details>
