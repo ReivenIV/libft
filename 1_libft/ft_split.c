@@ -6,11 +6,13 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:29:09 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/22 14:03:31 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/22 14:07:47 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//! the code is not treating the cases where malloc is failling with NULL.
 
 static int	is_caracter(char c, char caracter);
 static int	count_words(const char *src, char caracter);
