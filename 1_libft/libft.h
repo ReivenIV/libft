@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 18:40:34 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/22 13:37:12 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ char	*ft_strrchr(const char *src, int target);
 // with malloc
 char	*ft_strjoin(char const *src1, char const *src2);
 char	*ft_itoa(int src_n);
-char	*ft_strndup(const char *src, size_t start, size_t end);
 char	**ft_split(const char *src, char charset);
 char	*ft_strmapi(char const *src, char (*f)(unsigned int, char));
 void	ft_striteri(char *src, void (*f)(unsigned int, char*));
