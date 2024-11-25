@@ -6,11 +6,11 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 11:49:12 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 13:09:41 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 13:11:20 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
+/*
  * Will add a node (or object) at the end of the linked list. 
  * for explanation about the differences of **list, *list, list please check : 
  * documentation/language_C/linked_list/DOC_ft_lstadd_back.md
@@ -18,7 +18,7 @@
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **list, t_list *new_obj)
+void	ft_lstadd_back(t_list **list, t_list *new_obj)
 {
 	t_list	*last_obj;
 
