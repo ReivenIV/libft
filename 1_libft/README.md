@@ -225,7 +225,7 @@ If you completed the mandatory part, attempt the bonus part for additional point
 Implement the following list manipulation functions:
 
 - [x] **ft_lstnew**
-- [ ] **ft_lstadd_front**
+- [x] **ft_lstadd_front**
 - [ ] **ft_lstsize**
 - [ ] **ft_lstlast**
 - [ ] **ft_lstadd_back**

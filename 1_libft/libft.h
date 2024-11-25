@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/22 16:03:56 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:45:13 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_putstr_fd(char *src, int fd);
 void	ft_putendl_fd(char *src, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-// Bonus
+// Bonus linked list :
 typedef struct s_list
 {
 	void			*content;
@@ -65,6 +65,6 @@ typedef struct s_list
 
 
 t_list	*ft_lstnew(void *content);
-
+void ft_lstadd_front(t_list **a_list, t_list *new_obj);
 
 #endif
