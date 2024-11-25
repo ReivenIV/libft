@@ -231,7 +231,7 @@ Implement the following list manipulation functions:
 - [x] **ft_lstadd_back**
 - [x] **ft_lstdelone**
 - [x] **ft_lstclear**
-- [ ] **ft_lstiter**
+- [x] **ft_lstiter**
 - [ ] **ft_lstmap**
 
 Use the following structure to represent a node in your list:
