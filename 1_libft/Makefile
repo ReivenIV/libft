@@ -6,7 +6,7 @@
 #    By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/15 13:32:17 by fwebe-ir          #+#    #+#              #
-#    Updated: 2024/11/25 10:34:23 by fwebe-ir         ###   ########.fr        #
+#    Updated: 2024/11/25 10:56:04 by fwebe-ir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_strncmp.c ft_substr.c ft_isalnum.c ft_isprint.c ft_memcpy.c ft_putendl_fd.c\
 ft_strdup.c ft_strlcpy.c ft_strnstr.c ft_tolower.c ft_putnbr_fd.c\
 
 
-SRC_BONUS = ft_lstnew.c ft_lstadd_front.c
+SRC_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 
 OBJECT = ${SOURCES:.c=.o}
 
