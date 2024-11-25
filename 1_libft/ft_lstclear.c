@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:31:18 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 14:11:39 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 14:34:21 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@
 
 void	ft_lstclear(t_list **list, void (*del)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (del == NULL || *list == NULL)
-		return;
-
+		return ;
 	while (*list != NULL)
 	{
 		tmp = (*list)->next;
