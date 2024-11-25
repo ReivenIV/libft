@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 13:05:21 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 13:16:18 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void	ft_lstadd_front(t_list **a_list, t_list *new_obj);
 int		ft_lstsize(t_list *list);
 t_list	*ft_lstlast(t_list *list);
 void	ft_lstadd_back(t_list **list, t_list *new_obj);
+void	ft_lstdelone(t_list *node, void (*del)(void *));
 
 #endif
