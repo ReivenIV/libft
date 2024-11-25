@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:14:02 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 15:04:25 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 15:55:07 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,8 @@
 
 #include "libft.h"
 
-size_t	ft_strlen9(const char *str)
-{
-	size_t	count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
-}
-//* L46 If size <= end_dest, return size + src_len immediately without copying
-//* L48 Append characters from src to dest as long as there's space
+//* L37 If size <= end_dest, return size + src_len immediately without copying
+//* L39 Append characters from src to dest as long as there's space
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -41,8 +32,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len_src;
 
 	i = 0;
-	len_dest = ft_strlen9(dest);
-	len_src = ft_strlen9(src);
+	len_dest = ft_strlen(dest);
+	len_src = ft_strlen(src);
 	if (size <= len_dest)
 		return (size + len_src);
 	while (src[i] != '\0' && len_dest + i < size - 1)
