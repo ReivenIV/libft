@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:49:27 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 10:55:36 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 14:26:40 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,13 @@
 int	ft_lstsize(t_list *list)
 {
 	int		count;
-	t_list	*tmp;
 
 	count = 0;
 	if (list == NULL)
 		return (count);
-	tmp = list;
-	while (tmp != NULL)
+	while (list != NULL)
 	{
-		tmp = tmp->next;
+		list = list->next;
 		count++;
 	}
 	return (count);
