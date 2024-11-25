@@ -232,7 +232,7 @@ Implement the following list manipulation functions:
 - [x] **ft_lstdelone**
 - [x] **ft_lstclear**
 - [x] **ft_lstiter**
-- [ ] **ft_lstmap**
+- [x] **ft_lstmap**
 
 Use the following structure to represent a node in your list:
 
