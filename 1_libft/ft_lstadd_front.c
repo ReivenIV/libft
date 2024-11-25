@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:13:44 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 10:32:55 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:48:24 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **a_list, t_list *new_obj)
+void	ft_lstadd_front(t_list **a_list, t_list *new_obj)
 {
 	if (a_list && new_obj)
 	{

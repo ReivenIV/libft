@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 10:45:13 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:48:49 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-
 t_list	*ft_lstnew(void *content);
-void ft_lstadd_front(t_list **a_list, t_list *new_obj);
+void	ft_lstadd_front(t_list **a_list, t_list *new_obj);
 
 #endif
