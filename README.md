@@ -236,6 +236,8 @@ typedef struct s_list
 <!--! pliable content -->
 
 <summary>Functions Breakdown</summary>
+
+
 #### `ft_lstnew`
 ```c
 Prototype: t_list *ft_lstnew(void *content);
