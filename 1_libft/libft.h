@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:04 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/25 15:09:10 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:14:07 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <unistd.h>
 
 int		ft_atoi(const char *str);
-void	*ft_memset(void *buffer, int simbol, size_t size);
 void	*ft_bzero(void *buffer, size_t size);
+void	*ft_memset(void *buffer, int simbol, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);

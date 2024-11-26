@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:00:49 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/15 12:46:44 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:23:12 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,16 @@ int	ft_isalpha(int c)
 }
 /*
 #include <ctype.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int	main(void)
 {
 	char	test_chars[] = {'a', 'Z', '1', '$', '-'};
     for (int i = 0; i < 5; i++) {
-        printf("isalpha(%c): %d\n", test_chars[i], isalpha(test_chars[i]));
+//  printf("isalpha(%c): %d\n", test_chars[i], isalpha(test_chars[i]));
     }
         for (int i = 0; i < 5; i++) {
-        printf("ft_isalpha(%c): %d\n", test_chars[i],
+//        printf("ft_isalpha(%c): %d\n", test_chars[i],
 		ft_isalpha(test_chars[i]));
     }
     return (0);

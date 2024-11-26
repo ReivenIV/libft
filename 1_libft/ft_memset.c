@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:49:37 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/21 19:06:16 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/26 12:21:27 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memset(void *buffer, int simbol, size_t size)
 	return (buffer);
 }
 /*
-#include <stdio.h>
+//#include <stdio.h>
 #include <string.h>
 #include <stddef.h>
 
