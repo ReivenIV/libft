@@ -222,6 +222,10 @@ Implement the following list manipulation functions:
 - [x] **ft_lstiter**
 - [x] **ft_lstmap**
 
+<details>
+<!--! pliable content -->
+<summary>Functions Breakdown</summary>
+
 ### Use the following structure to represent a node in your list:
 
 ```c
@@ -232,10 +236,6 @@ typedef struct s_list
 } t_list;
 ```
 
-<details>
-<!--! pliable content -->
-
-<summary>Functions Breakdown</summary>
 
 
 #### `ft_lstnew`
