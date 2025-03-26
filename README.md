@@ -55,17 +55,17 @@ Use `malloc()` for:
 ---
 
 ## III.3 Part 2 - Additional Functions
-- [x] [ft_substr]([https://github.com/ReivenIV/42_student.pp/tree/main/1_libft/ft_substr](https://github.com/ReivenIV/libft/blob/main/1_libft/ft_substr.c))
-- [x] [ft_strjoin](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strjoin)
-- [x] [ft_strtrim](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strtrim)
-- [x] [ft_split](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_split)
-- [x] [ft_itoa](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_itoa)
-- [x] [ft_strmapi](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_strmapi)
-- [x] [ft_striteri](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_striteri)
-- [x] [ft_putchar_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putchar_fd)
-- [x] [ft_putstr_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putstr_fd)
-- [x] [ft_putendl_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putendl_fd)
-- [x] [ft_putnbr_fd](https://github.com/ReivenIV/42_student.pp/tree/main/1_libft#ft_putnbr_fd)
+- [x] ft_substr
+- [x] ft_strjoin
+- [x] ft_strtrim
+- [x] ft_split
+- [x] ft_itoa
+- [x] ft_strmapi
+- [x] ft_striteri
+- [x] ft_putchar_fd
+- [x] ft_putstr_fd
+- [x] ft_putendl_fd
+- [x] ft_putnbr_fd
 
 
 In this second part, you must develop a set of functions that are either not in the libc or are part of it but in a different form. Some of the following functions can be useful for writing the functions of Part 1.
